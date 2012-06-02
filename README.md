@@ -1,5 +1,6 @@
     cd&&
-    rm -rf ./.bash*&&
+    rm -rf $HOME/.bash*&&
     rm -rf ./dotfiles&&
     git clone git@github.com:gorodinskiy/dotfiles.git&&
-    mv -r ./dotfiles/.b* $HOME/
+    mv ./dotfiles/.b* $HOME/&&
+    rm -rf ./dotfiles 
