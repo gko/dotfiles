@@ -43,7 +43,7 @@ function git-help() {
   echo "Git Custom Aliases Usage"
   echo
   echo "  gcl  = git clone"
-  e cho "  g       = git"
+  echo "  g       = git"
   echo "  get     = git"
   echo "  ga      = git add"
   echo "  gall  = git add ."
