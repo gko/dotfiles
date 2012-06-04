@@ -10,3 +10,4 @@ source $BASH_FOLDER/themes/colors.bash
 source $BASH_FOLDER/aliases.bash
 source $BASH_FOLDER/functions.bash
 source $BASH_FOLDER/settings.bash
+source $BASH_FOLDER/completion.bash
