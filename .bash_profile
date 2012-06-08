@@ -4,7 +4,7 @@
 # See http://sam.zoy.org/wtfpl/COPYING for more details.        #
 #################################################################
 export BASH_FOLDER=$HOME/.bash
-export THEME="sirup"
+export THEME="mine"
 
 source $BASH_FOLDER/themes/colors.bash
 source $BASH_FOLDER/aliases.bash
