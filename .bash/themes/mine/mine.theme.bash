@@ -16,7 +16,7 @@ function rvm_version_prompt {
  
 function prompt_command() {
     # Check http://github.com/Sirupsen/dotfiles for screenshot
-    PS1="\n$background_blue \W/$(rvm_version_prompt) $yellow$(__git_ps1 " (%s) ")$normal$(echo -e " ∾") ${normal}"
+PS1="\n$bold_blue\W/$bold_green$(__git_ps1 " (%s)")$yellow$(echo -e " ∾"    ) ${normal}"
 }
 
 PROMPT_COMMAND=prompt_command;
