@@ -14,5 +14,3 @@ source $BASH_FOLDER/completion.bash
 
 # init z   https://github.com/rupa/z
 . ~/.bash/z/z.sh
-
-. ~/.bash/v/v.sh

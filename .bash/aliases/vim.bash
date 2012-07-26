@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-alias v='mvim --remote-tab'
+alias v='~/.bash/v/v'
