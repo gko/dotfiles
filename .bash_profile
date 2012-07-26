@@ -6,11 +6,11 @@
 export BASH_FOLDER=$HOME/.bash
 export THEME="mine"
 
-# init z   https://github.com/rupa/z
-. ~/.bash/z/z.sh
-
 source $BASH_FOLDER/themes/colors.bash
 source $BASH_FOLDER/aliases.bash
 source $BASH_FOLDER/functions.bash
 source $BASH_FOLDER/settings.bash
 source $BASH_FOLDER/completion.bash
+
+# init z   https://github.com/rupa/z
+. ~/.bash/z/z.sh
