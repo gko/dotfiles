@@ -1,3 +1,10 @@
+case $OSTYPE in
+  linux*)
+    alias open = "xdg-open"
+    alias o = "xdg-open"
+      ;;
+esac
+
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
