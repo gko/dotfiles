@@ -14,8 +14,10 @@ esac
 
 source $BASH_FOLDER/themes/base.bash
 
+export http_proxy=""
+export https_proxy=""
+
 if [ "$THEME" ];
 then
   source $BASH_FOLDER/themes/$THEME/$THEME.theme.bash
 fi
-

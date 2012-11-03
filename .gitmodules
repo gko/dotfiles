@@ -3,4 +3,4 @@
 	url = https://github.com/rupa/z.git
 [submodule ".bash/v"]
 	path = .bash/v
-	url = git://github.com/rupa/v.git
+	url = https://github.com/rupa/v.git
