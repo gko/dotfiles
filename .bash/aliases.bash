@@ -16,6 +16,6 @@ source $BASH_FOLDER/aliases/osx.bash
 source $BASH_FOLDER/aliases/vim.bash
 source $BASH_FOLDER/aliases/git.bash
 
-sniff="sudo ngrep -W byline -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
+alias sniff="sudo ngrep -W byline -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
 
 alias reload_bash='source ~/.bash_profile'
