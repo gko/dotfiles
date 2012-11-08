@@ -12,8 +12,5 @@ source $BASH_FOLDER/functions.bash
 source $BASH_FOLDER/settings.bash
 source $BASH_FOLDER/completion.bash
 
-#to be able to use Ctrl key in vim
-stty stop ''
-
 # init z   https://github.com/rupa/z
 . ~/.bash/z/z.sh
