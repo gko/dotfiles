@@ -289,11 +289,11 @@ __git_ps1 ()
 		elif [ "true" = "$(git rev-parse --is-inside-work-tree 2>/dev/null)" ]; then
 			if [ -n "${GIT_PS1_SHOWDIRTYSTATE-}" ]; then
 				if [ "$(git config --bool bash.showDirtyState)" != "false" ]; then
-					git diff --no-ext-diff --quiet --exit-code || w="$bold_red*"
+                    git diff --no-ext-diff --quiet --exit-code || w="$(echo -e ${BOLD}${MAGENTA})*"
 					if git rev-parse --quiet --verify HEAD >/dev/null; then
-						git diff-index --cached --quiet HEAD -- || i="$bold_yellow+"
+						git diff-index --cached --quiet HEAD -- || i="$(echo -e ${BOLD}${ORANGE})+"
 					else
-						i="$bold_yellow#"
+						i="$(echo -e ${BOLD}${ORANGE})#"
 					fi
 				fi
 			fi
@@ -313,7 +313,7 @@ __git_ps1 ()
 		fi
 
 		local f="$w$i$s$u"
-		printf "${1:- (%s)}" "$c${b##refs/heads/}${f:+$f}$r$p"
+		printf "${1:-%s}" "$c${b##refs/heads/}${f:+$f}$r$p"
 	fi
 }
 
