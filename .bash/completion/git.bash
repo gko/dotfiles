@@ -289,9 +289,9 @@ __git_ps1 ()
 		elif [ "true" = "$(git rev-parse --is-inside-work-tree 2>/dev/null)" ]; then
 			if [ -n "${GIT_PS1_SHOWDIRTYSTATE-}" ]; then
 				if [ "$(git config --bool bash.showDirtyState)" != "false" ]; then
-                    git diff --no-ext-diff --quiet --exit-code || w="$(echo -e ${BOLD}${MAGENTA})*"
+                    git diff --no-ext-diff --quiet --exit-code || w="$(echo -e ${BOLD}${RED})*"
 					if git rev-parse --quiet --verify HEAD >/dev/null; then
-						git diff-index --cached --quiet HEAD -- || i="$(echo -e ${BOLD}${ORANGE})+"
+						git diff-index --cached --quiet HEAD -- || i="$(echo -e ${BOLD}${YELLOW})+"
 					else
 						i="$(echo -e ${BOLD}${ORANGE})#"
 					fi
