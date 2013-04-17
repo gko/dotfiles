@@ -3,7 +3,7 @@
 # Do What The Fuck You Want To Public License, Version 2.       #
 # See http://sam.zoy.org/wtfpl/COPYING for more details.        #
 #################################################################
-export BASH_FOLDER=$HOME/.bash
+export BASH_FOLDER="$HOME"/.bash
 export THEME="mine"
 
 source $BASH_FOLDER/themes/colors.bash
