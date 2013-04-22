@@ -26,9 +26,9 @@ alias back="cd -"
 alias -- -="cd -"
 alias clr="clear"
 
-source $BASH_FOLDER/aliases/osx.bash
-source $BASH_FOLDER/aliases/vim.bash
-source $BASH_FOLDER/aliases/git.bash
+source ~/.bash/aliases/osx.bash
+source ~/.bash/aliases/vim.bash
+source ~/.bash/aliases/git.bash
 
 alias sniff="sudo ngrep -W byline -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
 

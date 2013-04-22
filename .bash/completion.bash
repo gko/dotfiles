@@ -1,3 +1,3 @@
-source $BASH_FOLDER/completion/git.bash
-source $BASH_FOLDER/completion/gitflow.bash
-source $BASH_FOLDER/completion/ssh.bash
+source ~/.bash/completion/git.bash
+source ~/.bash/completion/gitflow.bash
+source ~/.bash/completion/ssh.bash
