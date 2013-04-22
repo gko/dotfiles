@@ -19,5 +19,5 @@ export https_proxy=""
 
 if [ "$THEME" ];
 then
-  source ~/.bash/themes/$THEME/$THEME.theme.bash
+  source ~/.bash/themes/"$THEME"/"$THEME".theme.bash
 fi
