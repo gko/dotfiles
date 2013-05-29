@@ -14,8 +14,16 @@ esac
 
 source ~/.bash/themes/base.bash
 
-export http_proxy=""
-export https_proxy=""
+proxy_host=""
+proxy_port=""
+proxy_login=""
+proxy_pass=""
+
+export EDITOR=/usr/bin/vim
+
+#export http_proxy="http://$proxy_login:$proxy_pass@$proxy_host:$proxy_port"
+#export https_proxy="http://$proxy_login:$proxy_pass@$proxy_host:$proxy_port"
+#export JAVA_OPTS="$JAVA_OPTS -Dhttp.proxyHost=$proxy_host -Dhttp.proxyPort=$proxy_port -Dhttp.proxyUser=$proxy_login -Dhttp.proxyPassword=$proxy_pass"
 
 if [ "$THEME" ];
 then
