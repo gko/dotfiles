@@ -10,10 +10,10 @@ if tput setaf 1 &> /dev/null; then
 		BLUE=$(tput setaf 75)
 		RED=$(tput setaf 9)
 		ORANGE=$(tput setaf 214)
-		GREEN=$(tput setaf 82)
+		GREEN=$(tput setaf 2)
 		PURPLE=$(tput setaf 141)
 		WHITE=$(tput setaf 255)
-		YELLOW=$(tput setaf 11)
+		YELLOW=$(tput setaf 3)
 	else
 		RED=$(tput setaf 1)
 		ORANGE=$(tput setaf 1)
