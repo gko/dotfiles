@@ -57,7 +57,7 @@ modern_scm_prompt() {
     then
         return
     else
-        echo "$RESET on ${BOLD}${PURPLE}$(scm_prompt_info)"
+        echo -e "$RESET on ${BOLD}${PURPLE}$(scm_prompt_info)"
     fi
 }
 
