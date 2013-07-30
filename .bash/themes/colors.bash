@@ -9,8 +9,8 @@ if tput setaf 1 &> /dev/null; then
 	if [[ $(tput colors) -ge 256 ]] 2>/dev/null; then
 		BLUE=$(tput setaf 75)
 		RED=$(tput setaf 9)
-		ORANGE=$(tput setaf 214)
-		GREEN=$(tput setaf 2)
+		ORANGE=$(tput setaf 172)
+		GREEN=$(tput setaf 70)
 		PURPLE=$(tput setaf 141)
 		WHITE=$(tput setaf 255)
 		YELLOW=$(tput setaf 3)

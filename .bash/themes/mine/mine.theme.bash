@@ -2,8 +2,8 @@
 SCM_THEME_PROMPT_PREFIX=""
 SCM_THEME_PROMPT_SUFFIX=""
 
-SCM_THEME_PROMPT_DIRTY="${BOLD}${RED}*${RESET}"
-SCM_THEME_PROMPT_CLEAN="${BOLD}${GREEN}+${RESET}"
+SCM_THEME_PROMPT_DIRTY="${BOLD}${RED}•${RESET}"
+SCM_THEME_PROMPT_CLEAN="${BOLD}${GREEN}°${RESET}"
 #SCM_GIT_CHAR="${STRING_COLOR}±${normal}"
 #SCM_SVN_CHAR="${bold_cyan}⑆${normal}"
 #SCM_HG_CHAR="${BOLD}${RED}☿${normal}"
@@ -69,4 +69,4 @@ modern_scm_prompt() {
     #fi
 #}
 
-PS1="\n\[${BOLD}${RED}\]\u \[$RESET\]at \[${BOLD}${ORANGE}\]\h \[$RESET\]in \[${BOLD}${BLUE}\]\W\$(modern_scm_prompt)\[$RESET\]\n\$ \[$RESET\]"
+PS1="\n\[${BOLD}${RED}\]\u \[$RESET\]at \[${BOLD}${ORANGE}\]\h \[$RESET\]in \[${BOLD}${GREEN}\]\W\$(modern_scm_prompt)\[$RESET\]\n\$ \[$RESET\]"
