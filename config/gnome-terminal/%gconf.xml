@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="default_size_rows" mtime="1383669562" type="int" value="50"/>
+	<entry name="default_size_columns" mtime="1383669562" type="int" value="130"/>
+	<entry name="use_custom_default_size" mtime="1383669562" type="bool" value="true"/>
+	<entry name="background_darkness" mtime="1383669562" type="float" value="1"/>
+	<entry name="background_type" mtime="1375253180" type="string">
+		<stringvalue>solid</stringvalue>
+	</entry>
+	<entry name="cursor_shape" mtime="1383669562" type="string">
+		<stringvalue>underline</stringvalue>
+	</entry>
+	<entry name="font" mtime="1383669562" type="string">
+		<stringvalue>Anonymous Pro 11</stringvalue>
+	</entry>
+	<entry name="use_system_font" mtime="1383669562" type="bool" value="false"/>
+	<entry name="use_theme_colors" mtime="1383669562" type="bool" value="false"/>
+	<entry name="default_show_menubar" mtime="1383669562" type="bool" value="false"/>
+	<entry name="palette" mtime="1375103007" type="string">
+		<stringvalue>#000000000000:#CCCC00000000:#4E4E9A9A0606:#C4C4A0A00000:#34346565A4A4:#757550507B7B:#060698209A9A:#D3D3D7D7CFCF:#555557575353:#EFEF29292929:#8A8AE2E23434:#FCFCE9E94F4F:#72729F9FCFCF:#ADAD7F7FA8A8:#3434E2E2E2E2:#EEEEEEEEECEC</stringvalue>
+	</entry>
+	<entry name="alternate_screen_scroll" mtime="1383669562" type="bool" value="true"/>
+	<entry name="background_color" mtime="1383669562" type="string">
+		<stringvalue>#FDFDF6F6E3E3</stringvalue>
+	</entry>
+	<entry name="visible_name" mtime="1383669562" type="string">
+		<stringvalue>Default</stringvalue>
+	</entry>
+	<entry name="bold_color" mtime="1383669562" type="string">
+		<stringvalue>#000000000000</stringvalue>
+	</entry>
+	<entry name="foreground_color" mtime="1383669562" type="string">
+		<stringvalue>#6F6F83838989</stringvalue>
+	</entry>
+</gconf>
