@@ -25,7 +25,7 @@ if [[ "$osname" == "Linux" ]]; then
     #sakura
     mkdir -p ~/.config/sakura/
     cp ~/.bash/config/sakura/sakura.conf ~/.config/sakura/
-else if [[ "$osname" == "Darwin" ]]
+elif [[ "$osname" == "Darwin" ]]; then
     mkdir -p ~/Library/Fonts/
     cp ~/.bash/fonts/* ~/Library/Fonts/
 fi
