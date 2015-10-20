@@ -69,4 +69,4 @@ modern_scm_prompt() {
     #fi
 #}
 
-PS1="\n\[${BOLD}${RED}\]\u \[$RESET\]at \[${BOLD}${ORANGE}\]\h \[$RESET\]in \[${BOLD}${GREEN}\]\W\$(modern_scm_prompt)\[$RESET\]\n\$ \[$RESET\]"
+PS1="\n\[${BOLD}${RED}\]\u \[$RESET\]at \[${BOLD}${ORANGE}\]\h\[$RESET\] in \[${BOLD}${GREEN}\]\W\$modern_scm_prompt\[$RESET\]\n\$ \[$RESET\]"
