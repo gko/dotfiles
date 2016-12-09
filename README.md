@@ -4,5 +4,5 @@
 
 Run following command:
 ```bash
-curl -L https://raw.github.com/gorodinskiy/dotfiles/master/install.sh | bash
+curl -L https://raw.github.com/gko/dotfiles/master/install.sh | bash
 ```
