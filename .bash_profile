@@ -1,7 +1,7 @@
 # init z   https://github.com/rupa/z
-. ~/.bash/z/z.sh
+. ~/.bash/libs/z/z.sh
 
-export GITAWAREPROMPT=~/.bash/completion/git-aware-prompt
+export GITAWAREPROMPT=~/.bash/libs/git-aware-prompt
 source ${GITAWAREPROMPT}/main.sh
 
 source ~/.bash/themes/colors.bash
