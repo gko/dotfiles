@@ -1,3 +1,6 @@
 [submodule ".bash/z"]
 	path = .bash/z
 	url = https://github.com/rupa/z.git
+[submodule ".bash/completion/git-aware-prompt"]
+	path = .bash/completion/git-aware-prompt
+	url = git@github.com:jimeh/git-aware-prompt.git
