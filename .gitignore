@@ -1,0 +1,48 @@
+# Compiled
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyo
+*.pyc
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+*.bak
+*.swp
+*.swo
+.classpath
+.project
+.settings
+.idea
+.metadata
+*.iml
+*.ipr
+*.orig
+desktop.ini
+*.sublime-workspace
+*.msi 

@@ -12,21 +12,19 @@ case $OSTYPE in
     ;;
 esac
 
-source ~/.bash/themes/base.bash
-
 proxy_host=""
 proxy_port=""
 proxy_login=""
 proxy_pass=""
 
 export EDITOR=/usr/bin/vim
+export TERM=xterm
+export LANG=en_US.UTF-8
 
 #export http_proxy="http://$proxy_login:$proxy_pass@$proxy_host:$proxy_port"
 #export https_proxy="http://$proxy_login:$proxy_pass@$proxy_host:$proxy_port"
 #export JAVA_OPTS="$JAVA_OPTS -Dhttp.proxyHost=$proxy_host -Dhttp.proxyPort=$proxy_port -Dhttp.proxyUser=$proxy_login -Dhttp.proxyPassword=$proxy_pass"
 #git config --global http.proxy %$proxy_login:$proxy_pass@$proxy_host:$proxy_port%
 
-if [ "$THEME" ];
-then
-  source ~/.bash/themes/"$THEME"/"$THEME".theme.bash
-fi
+source ~/.bash/themes/ps1.bash
+export PROMPT_COMMAND="set_prompt; $PROMPT_COMMAND"

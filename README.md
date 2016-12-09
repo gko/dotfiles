@@ -2,7 +2,7 @@
 
 ##Installation
 
-On unix and windows(with unix tools):
-```
-curl -L https://raw.github.com/gorodinskiy/dotfiles/master/install.sh|bash
+Run following command:
+```bash
+curl -L https://raw.github.com/gorodinskiy/dotfiles/master/install.sh | bash
 ```

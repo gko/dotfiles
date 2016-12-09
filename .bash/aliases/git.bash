@@ -11,6 +11,7 @@ alias gs='git status'
 alias gss='git status -s'
 alias gsu='git submodule init&&git submodule update&&git submodule foreach "(git checkout master; git pull)&"'
 alias gl='git pull'
+alias gpu='git pull'
 alias gup='git fetch && git rebase'
 alias gp='git push'
 alias gpo='git push origin'
@@ -34,40 +35,6 @@ case $OSTYPE in
     alias gd='git diff | vim -R -'
     ;;
   darwin*)
-    alias gd='git diff | mate'
-    ;;
-  darwin*)
     alias gd='git diff'
     ;;
 esac
-
-function git-help() {
-  echo "Git Custom Aliases Usage"
-  echo
-  echo "  gcl  = git clone"
-  echo "  g       = git"
-  echo "  get     = git"
-  echo "  ga      = git add"
-  echo "  gall  = git add ."
-  echo "  gst/gs  = git status"
-  echo "  g ss  = git status -s"
-  echo "  gl      = git pull"
-  echo "  gup     =  git fetch && git rebase"
-  echo "  gp      = git push"
-  echo "  gd      = git diff | mate"
-  echo "  gdv     = git diff -w \"$@\" | vim -R -"
-  echo "  gc      = git commit -v"
-  echo "  gca     = git commit -v -a"
-  echo "  gci     = git commit --interactive"
-  echo "  gb      = git branch"
-  echo "  gba     = git branch -a"
-  echo "  gcount  = git shortlog -sn"
-  echo "  gcp     = git cherry-pick"
-  echo "  gco     = git checkout"
-  echo "  gexport = git git archive --format zip --output"
-  echo "  gdel    = git branch -D"
-  echo "  gpo     = git push origin"
-  echo "  gmu     = git fetch origin -v; git fetch upstream -v; git merge upstream/master"
-  echo "  gll     = git log --graph --pretty=oneline --abbrev-commit"
-  echo
-}
