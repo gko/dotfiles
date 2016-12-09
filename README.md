@@ -1,6 +1,6 @@
-#Bash settings
+#Dotfiles
 
-!(dotfiles)[https://raw.github.com/gko/dotfiles/master/dotfiles.gif]
+![dotfiles](https://raw.github.com/gko/dotfiles/master/dotfiles.gif)
 
 ##Installation
 
