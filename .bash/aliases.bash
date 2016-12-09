@@ -30,7 +30,6 @@ alias c="clear"
 alias servers="netstat -tulpn"
 
 alias vi='vim'
-alias v='~/.bash/v/v'
 
 source ~/.bash/aliases/git.bash
 
