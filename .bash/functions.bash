@@ -31,6 +31,7 @@ function la() {
 
 function server() {
   local port="${1:-8000}";
+  local pythonVersion="$(python -c 'import sys; print(sys.version_info[0])')"
 
   echo -e "\n  ${RESET}${GREEN}list of all ip-addresses:${RESET}"
   for ip in $(ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1');
@@ -39,8 +40,11 @@ function server() {
   done
   echo -e "\n"
 
-  # python -m SimpleHTTPServer for 2.X
-  python -m http.server $port
+  if [ $pythonVersion -eq 2 ]; then
+    python -m SimpleHTTPServer $port
+  else
+    python -m http.server $port
+  fi
 }
 
 # Syntax-highlight JSON strings or files

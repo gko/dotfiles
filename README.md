@@ -1,8 +1,6 @@
-#Dotfiles
+# Dotfiles
 
-![dotfiles](https://raw.github.com/gko/dotfiles/master/dotfiles.gif)
-
-##Installation
+## Installation
 
 Run following command:
 ```bash
