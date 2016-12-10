@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 # Aliases
 alias gcl='git clone'
 alias ga='git add'

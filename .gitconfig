@@ -11,7 +11,12 @@
   path = ~/.gitconfig.local
 
 [color]
-  ui = always
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
+  ui = true
+  pager = true
 
 [color "diff"]
   meta = yellow bold
