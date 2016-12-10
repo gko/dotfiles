@@ -3,4 +3,4 @@
 	url = https://github.com/rupa/z.git
 [submodule ".bash/completion/git-aware-prompt"]
 	path = .bash/libs/git-aware-prompt
-	url = git@github.com:jimeh/git-aware-prompt.git
+	url = https://github.com/jimeh/git-aware-prompt.git
