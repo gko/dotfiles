@@ -11,6 +11,6 @@ set_prompt() {
   if [[ $result -eq 0 ]]; then
     PS1+="\[$BOLD\]\[$RED\]❤ \[$RESET\]"
   else
-    PS1+="\[$BOLD\]\[$WHITE\]♡ \[$RESET\]"
+    PS1+="\[$BOLD\]\[$RED\]♡ \[$RESET\]"
   fi
 }
