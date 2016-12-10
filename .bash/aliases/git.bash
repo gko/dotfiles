@@ -7,7 +7,8 @@ alias get='git'
 alias gst='git status'
 alias gs='git status'
 alias gss='git status -s'
-alias gsu='git submodule init&&git submodule update&&git submodule foreach "(git checkout master; git pull)&"'
+alias gsu='git submodule init && git submodule update && git submodule foreach "(git checkout master; git pull) &"'
+alias gsa='git submodule add'
 alias gl='git pull'
 alias gpu='git pull'
 alias gup='git fetch && git rebase'
@@ -31,8 +32,10 @@ alias gll='git log --graph --pretty=oneline --abbrev-commit'
 case $OSTYPE in
   linux*)
     alias gd='git diff | vim -R -'
+    alias gdc='git diff --cached | vim -R -'
     ;;
   darwin*)
     alias gd='git diff'
+    alias gdc='git diff --cached'
     ;;
 esac
