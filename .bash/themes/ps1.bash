@@ -6,7 +6,7 @@ fi
 set_prompt() { 
   local result=$?
 
-  PS1="\[$RESET\]\n\[$BOLD\]\[$RED\]\u\[$_hostname\]\[$RESET\] in \[$BOLD\]\[$GREEN\]\W\[$RESET\]\$git_branch\[$BOLD\]\[$RED\]\$git_dirty\[$RESET\]\n"
+  PS1="\[$RESET\]\n \[$BOLD\]\[$RED\]\u\[$_hostname\]\[$RESET\] in \[$BOLD\]\[$GREEN\]\W\[$RESET\]\$git_branch\[$BOLD\]\[$RED\]\$git_dirty\[$RESET\]\n "
 
   if [[ $result -eq 0 ]]; then
     PS1+="\[$BOLD\]\[$RED\]❤ \[$RESET\]"
