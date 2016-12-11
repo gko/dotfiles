@@ -28,6 +28,7 @@ alias clr="clear"
 alias c="clear"
 # who listens on ports
 alias servers="netstat -tulpn"
+alias grep="grep -RnIiE --color=auto"
 
 alias vi='vim'
 
