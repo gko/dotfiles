@@ -1,11 +1,13 @@
 case $OSTYPE in
   linux*)
     alias open="xdgWrap"
+    alias clip="xclip -selection clipboard"
     ;;
   bsd*)
     alias open="xdgWrap"
     ;;
   darwin*)
+    alias clip="pbcopy"
     ;;
   cygwin|win32|win64|msys)
     alias open="cmd /c start"
@@ -28,8 +30,11 @@ alias clr="clear"
 alias c="clear"
 # who listens on ports
 alias servers="netstat -tulpn"
-alias grep="grep -nIiE --color=auto"
 alias sudo="sudo -E"
+alias grep="grep -IE --color=auto"
+alias ls="ls --color=auto"
+alias la="ls -la --color=auto"
+alias video2gif="echo -e \"\n  writing to ~/out.gif\n\" && ffmpeg -vf scale=640:-1 -gifflags +transdiff ~/out.gif -i"
 
 alias vi='vim'
 

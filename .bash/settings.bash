@@ -1,3 +1,5 @@
+source ~/.bash/settings/pre.bash
+
 case $OSTYPE in
   linux*)
     source ~/.bash/settings/keychain.bash
