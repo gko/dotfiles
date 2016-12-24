@@ -6,7 +6,13 @@ case $OSTYPE in
     ;;
 esac
 
-#set proxy
+# history
+export HISTFILESIZE=1000
+export HISTSIZE=2000
+export HISTTIMEFORMAT="[%F %T] "
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+# set proxy
 proxy_host=""
 proxy_port=""
 proxy_login=""

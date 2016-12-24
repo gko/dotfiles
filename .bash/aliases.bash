@@ -20,26 +20,42 @@ function xdgWrap() {
 
 alias o="open"
 
-# Easier navigation: .., ..., ~ and -
+# overall
+alias sudo="sudo -E"
+alias video2gif="echo -e \"\n  writing to ~/out.gif\n\" && ffmpeg -vf scale=640:-1 -gifflags +transdiff ~/out.gif -i"
+alias clr="clear"
+alias grep="grep -IE --color=auto"
+alias c="clear"
+alias ls="ls --color=auto"
+alias la="ls -la"
+alias ll="ls -lah"
+alias vi='vim'
+alias v='vim'
+
+# getting around
 alias ..="cd .."
 alias ...="cd ../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias back="cd -"
 alias -- -="cd -"
-alias clr="clear"
-alias c="clear"
+
+# network
+alias curl="curl -#"
+alias GET="curl -X GET -L"
+alias POST="curl -X POST -L"
+alias PUT="curl -X PUT -L"
+alias DELETE="curl -X DELETE -L"
+alias PATCH="curl --request PATCH -L"
+alias OPTIONS="curl -i -X OPTIONS -L"
+alias HEAD="curl -I -L"
+alias wget="curl -OL"
 # who listens on ports
 alias servers="netstat -tulpn"
-alias sudo="sudo -E"
-alias grep="grep -IE --color=auto"
-alias ls="ls --color=auto"
-alias la="ls -la --color=auto"
-alias video2gif="echo -e \"\n  writing to ~/out.gif\n\" && ffmpeg -vf scale=640:-1 -gifflags +transdiff ~/out.gif -i"
-
-alias vi='vim'
-
-source ~/.bash/aliases/git.bash
-
 alias sniff="sudo ngrep -W byline -d 'wlp2s0' -t '^(GET|POST) ' 'tcp and port 80'"
+alias ssh="ssh -CY"
+alias ssh-history="cat ~/.bash_history | grep -E \"^ssh\\s\" | sort -u"
+
+source ~/.bash/aliases/ssh.bash
+source ~/.bash/aliases/git.bash
 
 alias reload_bash='source ~/.bash_profile'
