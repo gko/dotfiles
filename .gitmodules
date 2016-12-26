@@ -4,3 +4,6 @@
 [submodule ".bash/completion/git-aware-prompt"]
 	path = .bash/libs/git-aware-prompt
 	url = https://github.com/jimeh/git-aware-prompt.git
+[submodule ".bash/libs/ssh-connect"]
+	path = .bash/libs/ssh-connect
+	url = https://github.com/gko/ssh-connect

@@ -53,7 +53,6 @@ alias wget="curl -OL"
 alias servers="netstat -tulpn"
 alias sniff="sudo ngrep -W byline -d 'wlp2s0' -t '^(GET|POST) ' 'tcp and port 80'"
 alias ssh="ssh -CY"
-alias ssh-history="cat ~/.bash_history | grep -E \"^ssh\\s\" | sort -u"
 
 source ~/.bash/aliases/git.bash
 

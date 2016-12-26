@@ -1,5 +1,6 @@
 # init z   https://github.com/rupa/z
 . ~/.bash/libs/z/z.sh
+. ~/.bash/libs/ssh-connect/ssh-connect.sh
 
 export GITAWAREPROMPT=~/.bash/libs/git-aware-prompt
 source ${GITAWAREPROMPT}/main.sh
