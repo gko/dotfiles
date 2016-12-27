@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd ~
+rm -rf "$HOME"/.bash&&
 rm -rf "$HOME"/.bashrc&&
 rm -rf "$HOME"/.bash_profile&&
 rm -rf ./dotfiles&&
