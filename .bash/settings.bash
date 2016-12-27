@@ -7,7 +7,7 @@ case $OSTYPE in
 esac
 
 # history
-export HISTFILESIZE=1000
+export HISTFILESIZE=4000
 export HISTSIZE=2000
 export HISTTIMEFORMAT="[%F %T] "
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
