@@ -7,3 +7,6 @@
 [submodule ".bash/libs/ssh-connect"]
 	path = .bash/libs/ssh-connect
 	url = https://github.com/gko/ssh-connect
+[submodule ".zsh/libs/zsh-git-prompt"]
+	path = .zsh/libs/zsh-git-prompt
+	url = https://github.com/olivierverdier/zsh-git-prompt
