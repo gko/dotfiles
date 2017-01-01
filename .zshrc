@@ -7,6 +7,7 @@ HOSTNAME=$(hostname)
 
 source ~/.bash/aliases.bash
 source ~/.bash/functions.bash
-source ~/.zsh/themes/ps1.sh
 
 source ~/.bash/settings.bash
+
+source ~/.zsh/themes/ps1.sh
