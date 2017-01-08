@@ -14,3 +14,5 @@ set_prompt() {
     PS1+="\[$BOLD\]\[$RED\]♡ \[$RESET\]"
   fi
 }
+
+export PROMPT_COMMAND="set_prompt; $PROMPT_COMMAND"

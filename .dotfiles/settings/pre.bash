@@ -4,3 +4,9 @@ if vim --version &> /dev/null; then
 else
   HAS_VIM=false
 fi
+
+if [ ! -d ~/go ] && [ ! -f ~/go ]; then
+  mkdir ~/go
+fi
+
+export GOPATH=~/go

@@ -1,12 +1,12 @@
 [submodule ".bash/z"]
-	path = .bash/libs/z
+	path = .dotfiles/libs/z
 	url = https://github.com/rupa/z.git
 [submodule ".bash/completion/git-aware-prompt"]
-	path = .bash/libs/git-aware-prompt
+	path = .dotfiles/libs/git-aware-prompt
 	url = https://github.com/jimeh/git-aware-prompt.git
 [submodule ".bash/libs/ssh-connect"]
-	path = .bash/libs/ssh-connect
+	path = .dotfiles/libs/ssh-connect
 	url = https://github.com/gko/ssh-connect
 [submodule ".zsh/libs/zsh-git-prompt"]
-	path = .zsh/libs/zsh-git-prompt
+	path = .dotfiles/libs/zsh-git-prompt
 	url = https://github.com/olivierverdier/zsh-git-prompt

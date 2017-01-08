@@ -54,6 +54,4 @@ alias servers="netstat -tulpn"
 alias sniff="sudo ngrep -W byline -d 'wlp2s0' -t '^(GET|POST) ' 'tcp and port 80'"
 alias ssh="ssh -CY"
 
-source ~/.bash/aliases/git.bash
-
-alias reload_bash='source ~/.bash_profile'
+source ~/.dotfiles/aliases/git.bash

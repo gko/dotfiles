@@ -1,13 +1,11 @@
 # init z   https://github.com/rupa/z
-. ~/.bash/libs/z/z.sh
-#. ~/.bash/libs/ssh-connect/ssh-connect.sh
-. ~/.zsh/libs/zsh-git-prompt/zshrc.sh
+. ~/.dotfiles/libs/z/z.sh
+. ~/.dotfiles/libs/zsh-git-prompt/zshrc.sh
 
 HOSTNAME=$(hostname)
 
-source ~/.bash/aliases.bash
-source ~/.bash/functions.bash
+source ~/.dotfiles/aliases.bash
+source ~/.dotfiles/functions.bash
+source ~/.dotfiles/settings.bash
 
-source ~/.bash/settings.bash
-
-source ~/.zsh/themes/ps1.sh
+source ~/.dotfiles/themes/zsh/ps1.sh
