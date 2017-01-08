@@ -7,9 +7,15 @@ case $OSTYPE in
 esac
 
 # history
+export SAVEHIST=4000
+export HISTFILE=~/.history
+if [ -n "$ZSH_VERSION" ]; then
+  setopt APPEND_HISTORY
+  setopt INC_APPEND_HISTORY
+fi
 export HISTFILESIZE=4000
 export HISTSIZE=2000
-export HISTTIMEFORMAT="[%F %T] "
+#export HISTTIMEFORMAT="[%F %T] "
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # set proxy
