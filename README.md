@@ -1,5 +1,5 @@
 # Dotfiles
-
+![screenshot](https://github.com/gko/dotfiles/raw/master/screenshot.png)
 ## Installation
 
 Run following command:
