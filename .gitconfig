@@ -16,15 +16,18 @@
 	f = fetch
 	graph = log --graph --pretty=oneline --abbrev-commit --decorate --all
 	l = log
+	last = log -1 HEAD
 	m = merge
 	mt = mergetool
 	p = push
 	pu = pull
 	r = reset --soft HEAD^
 	re = rebase
-	st = status
+	s = status
 	sa = submodule add
-	last = log -1 HEAD
+	si = submodule init
+	su = submodule update
+	ss = submodule status
 
 # push easily. http://stackoverflow.com/a/23918418/89484
 [push]
