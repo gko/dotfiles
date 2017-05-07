@@ -31,6 +31,7 @@ alias la="ls -la"
 alias ll="ls -lah"
 alias vi='vim'
 alias v='vim'
+alias g='git'
 
 # getting around
 alias ..="cd .."

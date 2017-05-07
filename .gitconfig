@@ -2,6 +2,30 @@
 [help]
   autocorrect = 1
 
+[alias]
+	a = add
+	A = add -A
+	br = branch
+	c = commit
+	ca = commit --amend
+	cl = clone
+	co = checkout
+	d = diff
+	ds = diff --staged
+	del = branch -D
+	f = fetch
+	graph = log --graph --pretty=oneline --abbrev-commit --decorate --all
+	l = log
+	m = merge
+	mt = mergetool
+	p = push
+	pu = pull
+	r = reset --soft HEAD^
+	re = rebase
+	st = status
+	sa = submodule add
+	last = log -1 HEAD
+
 # push easily. http://stackoverflow.com/a/23918418/89484
 [push]
   default = current
