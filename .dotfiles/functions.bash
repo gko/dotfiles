@@ -131,3 +131,7 @@ function extract() {
     echo "'$1' is not a valid file"
   fi
 }
+
+add-shadow() {
+	convert "$1" -trim \( +clone -background grey25 -shadow 80x40+5+30 \) +swap -background transparent -layers merge +repage "$1-shadow.png"
+}

@@ -41,3 +41,6 @@
   added = yellow
   changed = green
   untracked = cyan
+
+[mergetool]
+	keepBackup = false
