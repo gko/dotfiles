@@ -54,5 +54,3 @@ alias wget="curl -OL"
 alias servers="netstat -tulpn"
 alias sniff="sudo ngrep -W byline -d 'wlp2s0' -t '^(GET|POST) ' 'tcp and port 80'"
 alias ssh="ssh -CY"
-
-source ~/.dotfiles/aliases/git.bash
