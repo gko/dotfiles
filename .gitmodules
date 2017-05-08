@@ -10,3 +10,6 @@
 [submodule ".zsh/libs/zsh-git-prompt"]
 	path = .dotfiles/libs/zsh-git-prompt
 	url = https://github.com/olivierverdier/zsh-git-prompt
+[submodule ".dotfiles/libs/project"]
+	path = .dotfiles/libs/project
+	url = https://github.com/gko/project

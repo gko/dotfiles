@@ -3,31 +3,32 @@
   autocorrect = 1
 
 [alias]
-	a = add
-	A = add -A
-	br = branch
-	c = commit
-	ca = commit --amend
-	cl = clone
-	co = checkout
-	d = diff
-	ds = diff --staged
+  a = add
+  A = add -A
+  br = branch
+  c = commit
+  ca = commit --amend
+  cl = clone
+  co = checkout
+  d = diff
 	del = branch -D
-	f = fetch
-	graph = log --graph --pretty=oneline --abbrev-commit --decorate --all
-	l = log
-	last = log -1 HEAD
-	m = merge
-	mt = mergetool
-	p = push
-	pu = pull
-	r = reset --soft HEAD^
-	re = rebase
-	s = status
-	sa = submodule add
-	si = submodule init
-	su = submodule update
-	ss = submodule status
+  ds = diff --staged
+  dt = difftool
+  f = fetch
+  graph = log --graph --pretty=oneline --abbrev-commit --decorate --all
+  l = log
+  last = log -1 HEAD
+  m = merge
+  mt = mergetool
+  p = push
+  pu = pull
+  r = reset --soft HEAD^
+  re = rebase
+  s = status
+  sa = submodule add
+  si = submodule init
+  su = submodule update
+  ss = submodule status
 
 # push easily. http://stackoverflow.com/a/23918418/89484
 [push]
@@ -70,4 +71,7 @@
   untracked = cyan
 
 [mergetool]
-	keepBackup = false
+  keepBackup = false
+
+[diff]
+  tool = vimdiff
