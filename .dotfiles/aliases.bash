@@ -32,6 +32,7 @@ alias ll="ls -lah"
 alias vi='vim'
 alias v='vim'
 alias g='git'
+alias prj='project'
 
 # getting around
 alias ..="cd .."

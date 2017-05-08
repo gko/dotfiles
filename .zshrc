@@ -1,5 +1,6 @@
 # init z   https://github.com/rupa/z
 . ~/.dotfiles/libs/z/z.sh
+. ~/.dotfiles/libs/project/project.sh
 . ~/.dotfiles/libs/zsh-git-prompt/zshrc.sh
 . ~/.dotfiles/libs/ssh-connect/ssh-connect.sh
 
