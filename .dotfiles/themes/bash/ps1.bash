@@ -15,4 +15,4 @@ set_prompt() {
   fi
 }
 
-export PROMPT_COMMAND="$PROMPT_COMMAND set_prompt"
+export PROMPT_COMMAND="set_prompt; $PROMPT_COMMAND >/dev/null"
