@@ -11,7 +11,7 @@
   cl = clone
   co = checkout
   d = diff
-	del = branch -D
+  del = branch -D
   ds = diff --staged
   dt = difftool
   f = fetch
