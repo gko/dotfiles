@@ -1,15 +1,37 @@
-#!/bin/bash
+#!/bin/zsh
+
+echo "You're about to install «dotfiles»‼️ "
+read "answer?Proceed(y/n)❓"
+
+if ! [[ "$answer" =~ [yY] ]]; then
+	exit 0;
+fi
+
+echo "🚧 removing current dotfiles"
+rm -f ~/.zshrc
+rm -f ~/.bashrc
+rm -f ~/.bash_profile
+rm -f ~/.gitconfig
+rm -f ~/.gitignore
+rm -f ~/.bash_profile
+rm -rf ~/dotfiles
+rm -rf ~/.dotfiles
+rm -rf ~/.antigen
 
 cd ~
-rm -rf "$HOME"/.dotfiles&&
-rm -rf "$HOME"/.zshrc&&
-rm -rf "$HOME"/.bashrc&&
-rm -rf "$HOME"/.bash_profile&&
-rm -rf ./dotfiles&&
-git clone --depth 1 --recursive https://github.com/gko/dotfiles.git ~/dotfiles &&
-mv dotfiles/.dotfiles "$HOME"/ &&
-mv dotfiles/.bash* "$HOME"/ &&
-mv dotfiles/.zsh* "$HOME"/ &&
-mv dotfiles/.gitc* "$HOME"/ &&
-mv dotfiles/.giti* "$HOME"/ &&
-rm -rf ./dotfiles
+
+echo "⬇️  downloading latest version"
+cp -R ~/projects/dotfiles ~/dotfiles
+# git clone --depth 1 -b master --recursive https://github.com/gko/dotfiles
+mv ~/dotfiles ~/.dotfiles
+
+ln -s ~/.dotfiles/.bashrc ~/.bashrc
+ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
+
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
+
+ln -s ~/.dotfiles/.gitignore ~/.gitignore
+ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+
+echo "⚙️  installing antigen"
+curl -L git.io/antigen > ~/.dotfiles/antigen.zsh
