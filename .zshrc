@@ -1,13 +1,34 @@
-# init z   https://github.com/rupa/z
-. ~/.dotfiles/libs/z/z.sh
-. ~/.dotfiles/libs/project/project.sh
-. ~/.dotfiles/libs/zsh-git-prompt/zshrc.sh
-. ~/.dotfiles/libs/ssh-connect/ssh-connect.sh
+source ~/.dotfiles/aliases.sh
+source ~/.dotfiles/settings.sh
 
-HOSTNAME=$(hostname)
+source ~/.dotfiles/antigen.zsh
 
-source ~/.dotfiles/aliases.bash
-source ~/.dotfiles/functions.bash
-source ~/.dotfiles/settings.bash
+antigen use oh-my-zsh
 
-source ~/.dotfiles/themes/zsh/ps1.sh
+#antigen bundle chriskempson/base16-shell
+antigen bundle gko/project
+antigen bundle gko/ssh-connect
+#antigen theme "gko/heart-theme"
+
+antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle osx
+antigen bundle web-search
+antigen bundle z
+
+antigen bundle git
+antigen bundle git-extras
+antigen bundle git-flow
+antigen bundle github/hub etc/hub
+antigen bundle github
+
+antigen bundle sbt
+antigen bundle cargo
+antigen bundle npm
+
+antigen theme denysdovhan/spaceship-prompt
+
+# NVM bundle
+export NVM_LAZY_LOAD=true
+antigen bundle lukechilds/zsh-nvm
+
+antigen apply
