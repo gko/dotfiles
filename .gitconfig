@@ -7,7 +7,7 @@
 	A = add -A
 	b = branch
 	c = commit
-	ca = commit --amend
+	amend = commit --amend
 	cl = clone
 	co = checkout
 	d = diff
@@ -24,6 +24,9 @@
 	p = push
 	pu = pull
 	r = reset
+	hard = reset --hard
+	soft = reset --soft
+	unstage = reset HEAD
 	re = rebase
 	s = status
 	sa = submodule add
