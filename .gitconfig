@@ -1,77 +1,122 @@
 # correct typos
 [help]
-  autocorrect = 1
+	autocorrect = 1
 
 [alias]
-  a = add
-  A = add -A
-  br = branch
-  c = commit
-  ca = commit --amend
-  cl = clone
-  co = checkout
-  d = diff
-  del = branch -D
-  ds = diff --staged
-  dt = difftool
-  f = fetch
-  graph = log --graph --pretty=oneline --abbrev-commit --decorate --all
-  l = log
-  last = log -1 HEAD
-  m = merge
-  mt = mergetool
-  p = push
-  pu = pull
-  r = reset --soft HEAD^
-  re = rebase
-  s = status
-  sa = submodule add
-  si = submodule init
-  su = submodule update
-  ss = submodule status
+	a = add
+	A = add -A
+	b = branch
+	c = commit
+	ca = commit --amend
+	cl = clone
+	co = checkout
+	d = diff
+	del = branch -D
+	d = diff
+	ds = diff --staged
+	dt = difftool
+	f = fetch
+	graph = log --graph --pretty=oneline --abbrev-commit --decorate --all
+	l = log
+	last = log -1 HEAD
+	m = merge
+	mt = mergetool
+	p = push
+	pu = pull
+	r = reset
+	re = rebase
+	s = status
+	sa = submodule add
+	si = submodule init
+	su = submodule update
+	ss = submodule status
+	st = stash
+	sub = submodule
+
+	# custom functions
+	changelog = "!f() { git log --oneline --no-merges $1..HEAD; }; f"
+	compare = "!f() { git log --oneline $1..$2; }; f"
+	# refresh the date of commits
+	refresh = "!f() { git rebase HEAD~$1 --ignore-date; }; f"
+	local = "!git log --oneline --no-merges origin/$(git rev-parse --abbrev-ref HEAD).."
+	mindiff = diff -w --word-diff-regex=. --color-words -U0
+	overview = log --all --since='2 weeks' --oneline --no-merges
+	recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
+	sneak = commit -a --amend --no-edit
+	stats = shortlog -sn
+	today = "!f() { git log --since='00:00:00' --all --no-merges --oneline --author=$(git config user.email); }; f"
+	wdiff = diff --word-diff
+	upstream = "!git fetch && git log --oneline --no-merges ..origin/$(git rev-parse --abbrev-ref HEAD)"
+
+	# hub shortcuts
+	# this function allows you to go through hub low level api with or without multiple pages
+	paginate = "!paginate() { local output cursor; output=\"$(\"$@\")\"; cursor=\"$(awk '/\\.hasNextPage/ { has_next=$2 } /\\.endCursor/ { if (has_next==\"true\") print $2 }' <<<\"$output\")\"; printf \"%s\\n\" \"$output\"; [ -z \"$cursor\" ] || paginate \"$@\" -f after=\"$cursor\"; }; paginate "
+	user = "!f() { hub api --flat user | grep .login | awk '/.login/ {print $2}'; }; f"
+	repos = "!repos() { local user=\"${1?}\";shift 1; git paginate hub api -t graphql -f user=\"$user\" \"$@\" \
+		-f query='query($user: String!, $per_page: Int = 100, $after: String) { user(login: $user) { \
+		repositories(first: $per_page, after: $after) { nodes { nameWithOwner }, pageInfo { hasNextPage, endCursor } } } }';}; \
+		repos \"$(git user)\" | awk '/\\.nameWithOwner\\t/ { print $2 }';"
+	repo = "!f() { hub api \"repos/{owner}/{repo}\" --flat | awk '/\\.full_name\\t/ { print $2 }'; }; f"
+	view = "!f() { hub browse \"$(git repo)\" \"$1\"; }; f"
+	issues = "view issues"
+	comment = "!f() { hub api \"repos/{owner}/{repo}/issues/$1/comments\" --raw-field \"body=$2\"; }; f"
 
 # push easily. http://stackoverflow.com/a/23918418/89484
 [push]
-  default = current
+	default = current
 
 # use separate file for username / github token / etc
 [include]
-  path = ~/.gitconfig.local
+	path = ~/.gitconfig.local
 
 [color]
-  diff = auto
-  status = auto
-  branch = auto
-  interactive = auto
-  ui = true
-  pager = true
+	diff = auto
+	status = auto
+	branch = auto
+	interactive = auto
+	ui = true
+	pager = true
 
 [color "diff"]
-  meta = yellow bold
-  commit = green bold
-  frag = magenta bold
-  old = red bold
-  new = green bold
-  whitespace = red reverse
+	meta = yellow bold
+	commit = green bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
 
 [color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = "red bold 52"
-  newNormal = "green bold"
-  newHighlight = "green bold 22"
+	oldNormal = red bold
+	oldHighlight = "red bold 52"
+	newNormal = "green bold"
+	newHighlight = "green bold 22"
 
 [color "branch"]
-  current = yellow reverse
-  local = yellow
-  remote = green
+	current = yellow reverse
+	local = yellow
+	remote = green
 
 [color "status"]
-  added = yellow
-  changed = green
-  untracked = cyan
+	added = yellow
+	changed = green
+	untracked = cyan
 
 [mergetool]
-  keepBackup = false
+	keepBackup = false
+	tool = meld
 
 [diff]
-  tool = vimdiff
+	tool = meld
+
+[difftool]
+	prompt = false
+
+[difftool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"
+
+[credential]
+	helper = !aws codecommit credential-helper $@
+	UseHttpPath = true
+
+[hub]
+	protocol = https
