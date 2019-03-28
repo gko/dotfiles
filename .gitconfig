@@ -21,6 +21,7 @@
 	last = log -1 HEAD
 	m = merge
 	mt = mergetool
+	master = co master
 	p = push
 	pu = pull
 	r = reset
@@ -35,6 +36,7 @@
 	ss = submodule status
 	st = stash
 	sub = submodule
+	t = tag
 
 	# custom functions
 	changelog = "!f() { git log --oneline --no-merges $1..HEAD; }; f"
@@ -51,7 +53,16 @@
 	wdiff = diff --word-diff
 	upstream = "!git fetch && git log --oneline --no-merges ..origin/$(git rev-parse --abbrev-ref HEAD)"
 
-	# hub shortcuts
+	# github(hub) shortcuts
+	code = browse -- code
+	issues = browse -- issues
+	pulls = browse -- pulls
+	wiki = browse -- wiki
+	projects = browse -- projects
+	insights = browse -- insights
+	settings = browse -- settings
+	releases = browse -- releases
+
 	# this function allows you to go through hub low level api with or without multiple pages
 	paginate = "!paginate() { local output cursor; output=\"$(\"$@\")\"; cursor=\"$(awk '/\\.hasNextPage/ { has_next=$2 } /\\.endCursor/ { if (has_next==\"true\") print $2 }' <<<\"$output\")\"; printf \"%s\\n\" \"$output\"; [ -z \"$cursor\" ] || paginate \"$@\" -f after=\"$cursor\"; }; paginate "
 	user = "!f() { hub api --flat user | grep .login | awk '/.login/ {print $2}'; }; f"
@@ -60,8 +71,6 @@
 		repositories(first: $per_page, after: $after) { nodes { nameWithOwner }, pageInfo { hasNextPage, endCursor } } } }';}; \
 		repos \"$(git user)\" | awk '/\\.nameWithOwner\\t/ { print $2 }';"
 	repo = "!f() { hub api \"repos/{owner}/{repo}\" --flat | awk '/\\.full_name\\t/ { print $2 }'; }; f"
-	view = "!f() { hub browse \"$(git repo)\" \"$1\"; }; f"
-	issues = "view issues"
 	comment = "!f() { hub api \"repos/{owner}/{repo}/issues/$1/comments\" --raw-field \"body=$2\"; }; f"
 
 # push easily. http://stackoverflow.com/a/23918418/89484
@@ -81,8 +90,8 @@
 	pager = true
 
 [color "diff"]
-	meta = yellow bold
-	commit = green bold
+	meta = yellow
+	commit = yellow bold
 	frag = magenta bold
 	old = red bold
 	new = green bold
@@ -90,9 +99,9 @@
 
 [color "diff-highlight"]
 	oldNormal = red bold
-	oldHighlight = "red bold 52"
-	newNormal = "green bold"
-	newHighlight = "green bold 22"
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
 
 [color "branch"]
 	current = yellow reverse
@@ -122,4 +131,6 @@
 	UseHttpPath = true
 
 [hub]
-	protocol = https
+	protocol = ssh
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
