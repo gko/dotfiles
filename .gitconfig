@@ -10,6 +10,7 @@
 	amend = commit --amend
 	cl = clone
 	co = checkout
+	contains = describe --all --contains
 	d = diff
 	del = branch -D
 	d = diff
@@ -54,6 +55,7 @@
 	upstream = "!git fetch && git log --oneline --no-merges ..origin/$(git rev-parse --abbrev-ref HEAD)"
 
 	# github(hub) shortcuts
+	view = browse --
 	code = browse -- code
 	issues = browse -- issues
 	pulls = browse -- pulls
