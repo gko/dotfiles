@@ -5,10 +5,8 @@ source ~/.dotfiles/antigen.zsh
 
 antigen use oh-my-zsh
 
-#antigen bundle chriskempson/base16-shell
 antigen bundle gko/project
 antigen bundle gko/ssh-connect
-#antigen theme "gko/heart-theme"
 
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle osx
@@ -25,6 +23,7 @@ antigen bundle sbt
 antigen bundle cargo
 antigen bundle npm
 
+antigen bundle nightsense/cosmic_latte shell/cosmic_latte_light.sh
 antigen theme denysdovhan/spaceship-prompt
 
 # NVM bundle
