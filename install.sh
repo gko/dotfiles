@@ -21,8 +21,9 @@ rm -rf ~/.antigen
 cd ~
 
 echo "⬇️  downloading latest version"
-cp -R ~/projects/dotfiles ~/dotfiles
-# git clone --depth 1 -b master --recursive https://github.com/gko/dotfiles
+# for testing purposes
+# cp -R ~/projects/dotfiles ~/dotfiles
+git clone --depth 1 -b master --recursive https://github.com/gko/dotfiles
 mv ~/dotfiles ~/.dotfiles
 
 ln -s ~/.dotfiles/.bashrc ~/.bashrc
