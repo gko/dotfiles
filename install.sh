@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-echo "You're about to install «dotfiles»‼️ "
+echo "You're about to install «dotfiles»‼️"
 read "answer?Proceed(y/n)❓"
 
 if ! [[ "$answer" =~ [yY] ]]; then
