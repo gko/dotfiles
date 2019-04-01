@@ -3,12 +3,13 @@
 ## Installation
 
 Run following command:
-```bash
-curl -L https://raw.github.com/gko/dotfiles/master/install.sh | bash
+````````
+```zsh
+curl -L https://raw.github.com/gko/dotfiles/master/install.sh | zsh
 ```
 
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2012-2017 Konstantin Gorodinskiy
+Copyright (c) 2012-2019 Konstantin Gorodinskiy

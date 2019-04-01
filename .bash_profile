@@ -1,13 +1,6 @@
-# init z   https://github.com/rupa/z
-. ~/.dotfiles/libs/z/z.sh
-. ~/.dotfiles/libs/project/project.sh
-. ~/.dotfiles/libs/ssh-connect/ssh-connect.sh
+source ~/.dotfiles/aliases.sh
+source ~/.dotfiles/settings.sh
 
-export GITAWAREPROMPT=~/.dotfiles/libs/git-aware-prompt
-source ${GITAWAREPROMPT}/main.sh
-
-source ~/.dotfiles/settings.bash
-source ~/.dotfiles/themes/bash/colors.bash
-source ~/.dotfiles/themes/bash/ps1.bash
-source ~/.dotfiles/functions.bash
-source ~/.dotfiles/aliases.bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
