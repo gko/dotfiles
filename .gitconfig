@@ -2,6 +2,10 @@
 [help]
 	autocorrect = 1
 
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	editor = vim
+
 [alias]
 	a = add
 	A = add -A
@@ -36,12 +40,14 @@
 	su = submodule update
 	ss = submodule status
 	st = stash
+	save = stash save
+	pop = stash pop
 	sub = submodule
 	t = tag
 
 	# custom functions
 	changelog = "!f() { git log --oneline --no-merges $1..HEAD; }; f"
-	compare = "!f() { git log --oneline $1..$2; }; f"
+	differences = "!f() { git log --oneline $1..$2; }; f"
 	# refresh the date of commits
 	refresh = "!f() { git rebase HEAD~$1 --ignore-date; }; f"
 	local = "!git log --oneline --no-merges origin/$(git rev-parse --abbrev-ref HEAD).."
@@ -134,6 +140,3 @@
 
 [hub]
 	protocol = ssh
-
-[core]
-	pager = diff-so-fancy | less --tabs=4 -RFX

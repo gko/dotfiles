@@ -25,7 +25,6 @@ alias video2gif="echo -e \"\n  writing to ~/out.gif\n\" && ffmpeg -vf scale=640:
 alias clr="clear"
 alias grep="grep -IE --color=auto"
 alias c="clear"
-alias ls="ls --color=auto"
 alias la="ls -la"
 alias ll="ls -lah"
 alias vi='vim'
