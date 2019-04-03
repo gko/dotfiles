@@ -23,7 +23,8 @@ antigen bundle sbt
 antigen bundle cargo
 antigen bundle npm
 
-antigen bundle nightsense/cosmic_latte shell/cosmic_latte_light.sh
+# antigen bundle nightsense/cosmic_latte shell/cosmic_latte_light.sh
+antigen bundle nightsense/snow shell/snow_light.sh
 antigen theme denysdovhan/spaceship-prompt
 
 # NVM bundle
