@@ -1,5 +1,8 @@
 # Dotfiles
+
+My dotfiles config.
 ![screenshot](https://github.com/gko/dotfiles/raw/master/screenshot.png)
+
 ## Installation
 
 Run following command:
