@@ -3,8 +3,7 @@
 ## Installation
 
 Run following command:
-````````
-```zsh
+```shell
 curl -L https://raw.github.com/gko/dotfiles/master/install.sh | zsh
 ```
 
