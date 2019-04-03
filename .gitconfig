@@ -62,7 +62,7 @@
 
 	# github(hub) shortcuts
 	view = browse --
-	code = browse -- code
+	code = browse --
 	issues = browse -- issues
 	pulls = browse -- pulls
 	wiki = browse -- wiki
