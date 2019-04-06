@@ -45,6 +45,7 @@
 	pop = stash pop
 	sub = submodule
 	t = tag
+	set-url = remote set-url origin 
 
 	# custom functions
 	changelog = "!git log --oneline --no-merges $1..HEAD"
@@ -80,6 +81,7 @@
 		repositories(first: $per_page, after: $after) { nodes { nameWithOwner }, pageInfo { hasNextPage, endCursor } } } }';}; \
 		repos \"$(git user)\" | awk '/\\.nameWithOwner\\t/ { print $2 }';"
 	repo = "!hub api \"repos/{owner}/{repo}\" --flat | awk '/\\.full_name\\t/ { print $2 }'"
+	rename-repo = "!f() { hub api --flat -XPATCH repos/{owner}/{repo} -f name=$1 | grep .ssh_url | awk '/.ssh_url/ {print $2}' | xargs git set-url; }; f"
 	comment = "!hub api \"repos/{owner}/{repo}/issues/$1/comments\" --raw-field \"body=$2\""
 
 # push easily. http://stackoverflow.com/a/23918418/89484

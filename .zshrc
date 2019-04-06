@@ -25,6 +25,7 @@ antigen bundle npm
 
 # antigen bundle nightsense/cosmic_latte shell/cosmic_latte_light.sh
 antigen bundle nightsense/snow shell/snow_light.sh
+# antigen theme gko/heart-theme
 antigen theme denysdovhan/spaceship-prompt
 
 # NVM bundle
