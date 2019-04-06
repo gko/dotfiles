@@ -75,13 +75,13 @@
 
 	# this function allows you to go through hub low level api with or without multiple pages
 	paginate = "!paginate() { local output cursor; output=\"$(\"$@\")\"; cursor=\"$(awk '/\\.hasNextPage/ { has_next=$2 } /\\.endCursor/ { if (has_next==\"true\") print $2 }' <<<\"$output\")\"; printf \"%s\\n\" \"$output\"; [ -z \"$cursor\" ] || paginate \"$@\" -f after=\"$cursor\"; }; paginate "
-	user = "!hub api --flat user | grep .login | awk '/.login/ {print $2}'"
+	user = "!hub api --flat user | grep -e '\\.login' | awk '/.login/ {print $2}'"
 	repos = "!repos() { local user=\"${1?}\";shift 1; git paginate hub api -t graphql -f user=\"$user\" \"$@\" \
 		-f query='query($user: String!, $per_page: Int = 100, $after: String) { user(login: $user) { \
 		repositories(first: $per_page, after: $after) { nodes { nameWithOwner }, pageInfo { hasNextPage, endCursor } } } }';}; \
 		repos \"$(git user)\" | awk '/\\.nameWithOwner\\t/ { print $2 }';"
 	repo = "!hub api \"repos/{owner}/{repo}\" --flat | awk '/\\.full_name\\t/ { print $2 }'"
-	rename-repo = "!f() { hub api --flat -XPATCH repos/{owner}/{repo} -f name=$1 | grep .ssh_url | awk '/.ssh_url/ {print $2}' | xargs git set-url; }; f"
+	rename-repo = "!f() { hub api --flat -XPATCH repos/{owner}/{repo} -f name=$1 | grep -e '\\.ssh_url' | awk '/.ssh_url/ {print $2}' | xargs git set-url; }; f"
 	comment = "!hub api \"repos/{owner}/{repo}/issues/$1/comments\" --raw-field \"body=$2\""
 
 # push easily. http://stackoverflow.com/a/23918418/89484
