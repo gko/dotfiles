@@ -1,3 +1,5 @@
+setopt correct
+
 source ~/.dotfiles/aliases.sh
 source ~/.dotfiles/settings.sh
 
