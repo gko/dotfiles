@@ -28,6 +28,7 @@ antigen bundle npm
 # antigen bundle nightsense/cosmic_latte shell/cosmic_latte_light.sh
 # antigen bundle nightsense/snow shell/snow_light.sh
 # antigen theme denysdovhan/spaceship-prompt
+antigen chriskempson/base16-shell
 antigen theme gko/heart
 
 # NVM bundle
