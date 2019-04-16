@@ -11,6 +11,7 @@ antigen bundle gko/project
 antigen bundle gko/ssh-connect
 
 antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle osx
 antigen bundle web-search
 antigen bundle z
@@ -28,7 +29,7 @@ antigen bundle npm
 # antigen bundle nightsense/cosmic_latte shell/cosmic_latte_light.sh
 # antigen bundle nightsense/snow shell/snow_light.sh
 # antigen theme denysdovhan/spaceship-prompt
-antigen chriskempson/base16-shell
+antigen bundle chriskempson/base16-shell
 antigen theme gko/heart
 
 # NVM bundle
