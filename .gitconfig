@@ -46,6 +46,7 @@
 	sub = submodule
 	t = tag
 	set-url = remote set-url origin 
+	modified = ls-files --modified --others --exclude-standard
 
 	# custom functions
 	changelog = "!git log --oneline --no-merges $1..HEAD"
@@ -61,6 +62,7 @@
 	today = "!git log --since='00:00:00' --all --no-merges --oneline --author=$(git config user.email)"
 	wdiff = diff --word-diff
 	upstream = "!git fetch && git log --oneline --no-merges ..origin/$(git rev-parse --abbrev-ref HEAD)"
+	zip-modified = "!zip modified.zip $(git modified)"
 
 	# github(hub) shortcuts
 	view = browse --
