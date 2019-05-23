@@ -21,6 +21,8 @@
 	d = diff
 	ds = diff --staged
 	dt = difftool
+	vimdiff = "!git diff | vim -"
+	vimdiff-staged = "!git diff --staged | vim -"
 	f = fetch
 	graph = log --graph --pretty=oneline --abbrev-commit --decorate --all
 	l = log
@@ -65,6 +67,7 @@
 	zip-modified = "!zip modified.zip $(git modified)"
 
 	# github(hub) shortcuts
+	open = browse --
 	view = browse --
 	code = browse --
 	issues = browse -- issues
