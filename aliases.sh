@@ -27,6 +27,7 @@ alias grep="grep -IE --color=auto"
 alias c="clear"
 alias la="ls -la"
 alias ll="ls -lah"
+alias nv='nvim'
 alias vi='vim'
 alias v='vim'
 alias g='git'

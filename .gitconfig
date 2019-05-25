@@ -29,7 +29,7 @@
 	last = log -1 HEAD
 	m = merge
 	mt = mergetool
-	master = co master
+	master = checkout master
 	p = push
 	pu = pull
 	r = reset
@@ -47,7 +47,7 @@
 	pop = stash pop
 	sub = submodule
 	t = tag
-	set-url = remote set-url origin 
+	set-url = remote set-url origin
 	modified = ls-files --modified --others --exclude-standard
 
 	# custom functions
