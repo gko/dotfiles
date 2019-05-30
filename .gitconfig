@@ -21,8 +21,7 @@
 	d = diff
 	ds = diff --staged
 	dt = difftool
-	vimdiff = "!git diff | vim -"
-	vimdiff-staged = "!git diff --staged | vim -"
+	dts = difftool --staged
 	f = fetch
 	graph = log --graph --pretty=oneline --abbrev-commit --decorate --all
 	l = log
@@ -134,13 +133,10 @@
 	tool = meld
 
 [diff]
-	tool = meld
+	tool = vimdiff
 
 [difftool]
 	prompt = false
-
-[difftool "meld"]
-	cmd = meld "$LOCAL" "$REMOTE"
 
 [credential]
 	helper = !aws codecommit credential-helper $@
