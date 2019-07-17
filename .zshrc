@@ -15,6 +15,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle osx
 antigen bundle web-search
 antigen bundle z
+antigen bundle dotenv
 
 antigen bundle git
 antigen bundle git-extras
