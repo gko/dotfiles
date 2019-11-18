@@ -25,6 +25,7 @@ echo "⬇️  downloading latest version"
 # for testing purposes
 # cp -R ~/projects/dotfiles ~/dotfiles
 git clone --depth 1 -b master --recursive https://github.com/gko/dotfiles
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 mv ~/dotfiles ~/.dotfiles
 
 ln -s ~/.dotfiles/.bashrc ~/.bashrc
