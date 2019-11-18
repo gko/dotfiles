@@ -18,6 +18,7 @@ rm -rf ~/dotfiles
 rm -rf ~/.dotfiles
 rm -rf ~/.antigen
 rm -rf ~/.tmux.conf
+rm -rf ~/.tmux/plugins/tpm
 
 cd ~
 
