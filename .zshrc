@@ -1,4 +1,5 @@
 setopt correct
+setopt auto_cd
 
 source ~/.dotfiles/aliases.sh
 source ~/.dotfiles/settings.sh
@@ -55,3 +56,19 @@ case `uname` in
 		bindkey "^[[1;5D" backward-word
 		;;
 esac
+
+# for VIM and TMUX
+if [ "$TERM" = "xterm" ]; then
+	export TERM=xterm-256color
+fi
+
+# TMUX
+if which tmux >/dev/null 2>&1; then
+	# if no session is started, start a new session
+	test -z ${TMUX} && tmux
+
+	# when quitting tmux, try to attach
+	while test -z ${TMUX}; do
+		tmux attach || break
+	done
+fi
