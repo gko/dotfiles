@@ -37,6 +37,8 @@ ln -s ~/.dotfiles/.bash_profile ~/.bash_profile
 
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
+# dev session with vim and 3 split layout
+ln -s ~/.dotfiles/dev ~/.tmux/dev
 
 ln -s ~/.dotfiles/.gitignore ~/.gitignore
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
