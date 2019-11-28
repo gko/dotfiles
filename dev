@@ -1,8 +1,8 @@
 # kill all panes except for the first
 # kill-pane -a -t 1
 
-new  -s Developer -n "#{pane_current_path}" -c "#{pane_current_path}" # "nvim ." # "$EDITOR ."
-send-keys -t 1 C-z 'nvim .' Enter
+new  -s Developer -n "#{pane_current_path}" -c "#{pane_current_path}"
+send-keys -t 1 C-z '$EDITOR .' Enter
 split-window -h -p 50 -c "#{pane_current_path}"
 split-window -v -p 50 -c "#{pane_current_path}"
 select-pane -t 1
