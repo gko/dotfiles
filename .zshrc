@@ -83,3 +83,7 @@ if which tmux >/dev/null 2>&1; then
 		fi
 	fi
 fi
+
+if [ -f ~/.zshrc.local ]; then
+	source ~/.zshrc.local
+fi
