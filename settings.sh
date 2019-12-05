@@ -1,4 +1,5 @@
 source ~/.dotfiles/settings/go.sh
+source ~/.dotfiles/settings/java.sh
 
 case $OSTYPE in
 	linux*)
