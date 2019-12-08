@@ -33,6 +33,7 @@ antigen bundle npm
 # antigen theme denysdovhan/spaceship-prompt
 antigen bundle chriskempson/base16-shell
 antigen theme gko/heart
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 # NVM bundle
 export NVM_LAZY_LOAD=true
