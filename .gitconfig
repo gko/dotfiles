@@ -130,7 +130,7 @@
 
 [mergetool]
 	keepBackup = false
-	tool = meld
+	tool = vimdiff
 
 [diff]
 	tool = vimdiff
