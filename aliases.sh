@@ -50,6 +50,12 @@ alias PATCH="curl --request PATCH -L"
 alias OPTIONS="curl -i -X OPTIONS -L"
 alias HEAD="curl -I -L"
 
+# https://github.com/LukeSmithxyz/voidrice/blob/efa9fffae21abdcf207678655a446770082afd9a/.config/aliasrc#L17
+ls="ls -hN --color=auto --group-directories-first"
+grep="grep --color=auto"
+diff="diff --color=auto"
+ccat="highlight --out-format=ansi"
+
 # who listens on ports
 alias servers="netstat -tulpn"
 alias sniff="sudo ngrep -W byline -d 'wlp2s0' -t '^(GET|POST) ' 'tcp and port 80'"
