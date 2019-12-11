@@ -1,3 +1,8 @@
+# https://github.com/LukeSmithxyz/voidrice/blob/efa9fffae21abdcf207678655a446770082afd9a/.config/aliasrc#L17
+alias ls="ls -hN --color=auto --group-directories-first"
+alias la="ls -la"
+alias ll="ls -lah"
+
 case $OSTYPE in
 	linux*)
 		alias open="xdgWrap"
@@ -7,6 +12,7 @@ case $OSTYPE in
 		alias open="xdgWrap"
 		;;
 	darwin*)
+		alias ls="ls -h -G"
 		alias clip="pbcopy"
 		;;
 	cygwin|win32|win64|msys)
@@ -48,10 +54,6 @@ alias PATCH="curl --request PATCH -L"
 alias OPTIONS="curl -i -X OPTIONS -L"
 alias HEAD="curl -I -L"
 
-# https://github.com/LukeSmithxyz/voidrice/blob/efa9fffae21abdcf207678655a446770082afd9a/.config/aliasrc#L17
-alias ls="ls -hN --color=auto --group-directories-first"
-alias la="ls -la"
-alias ll="ls -lah"
 alias grep="grep --color=auto"
 alias diff="diff --color=auto"
 alias ccat="highlight --out-format=ansi"
