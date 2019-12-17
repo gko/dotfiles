@@ -68,14 +68,15 @@
 	# github(hub) shortcuts
 	open = browse --
 	view = browse --
+	actions = browse -- actions
 	code = browse --
 	issues = browse -- issues
-	pulls = browse -- pulls
-	wiki = browse -- wiki
 	projects = browse -- projects
-	insights = browse -- insights
-	settings = browse -- settings
+	pulls = browse -- pulls
+	pulse = browse -- pulse
 	releases = browse -- releases
+	settings = browse -- settings
+	wiki = browse -- wiki
 
 	# this function allows you to go through hub low level api with or without multiple pages
 	paginate = "!paginate() { local output cursor; output=\"$(\"$@\")\"; cursor=\"$(awk '/\\.hasNextPage/ { has_next=$2 } /\\.endCursor/ { if (has_next==\"true\") print $2 }' <<<\"$output\")\"; printf \"%s\\n\" \"$output\"; [ -z \"$cursor\" ] || paginate \"$@\" -f after=\"$cursor\"; }; paginate "
