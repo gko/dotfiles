@@ -62,9 +62,7 @@ case `uname` in
 esac
 
 # for VIM and TMUX
-if [ "$TERM" = "xterm" ]; then
-	export TERM=xterm-256color
-fi
+export TERM=xterm-256color
 
 if which tmux >/dev/null 2>&1; then
 	if [[ -z "$TMUX" ]] ;then
