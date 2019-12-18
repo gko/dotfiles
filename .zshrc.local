@@ -1,5 +1,6 @@
-nvm use 8
+nvm use 12
 alias python=python3
 export EDITOR=/usr/local/bin/nvim
 export ANDROID_HOME=/Users/gk/Library/Android/sdk
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home
+# export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home
+export PATH=$PATH:~/.cargo/bin:~/go/bin
