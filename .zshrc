@@ -13,6 +13,7 @@ antigen use oh-my-zsh
 
 antigen bundle gko/project
 antigen bundle gko/ssh-connect
+antigen bundle gko/docker-alias
 
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-autosuggestions
