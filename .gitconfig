@@ -66,6 +66,7 @@
 	zip-modified = "!zip modified.zip $(git modified)"
 
 	# github(hub) shortcuts
+	o = browse --
 	open = browse --
 	view = browse --
 	actions = browse -- actions
