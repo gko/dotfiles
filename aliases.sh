@@ -37,6 +37,7 @@ alias n='nvim'
 alias e="$EDITOR"
 alias g='git'
 alias prj='project'
+alias p='project'
 
 # getting around
 alias ..="cd .."
