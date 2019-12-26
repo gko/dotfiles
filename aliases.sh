@@ -36,6 +36,7 @@ alias nv='nvim'
 alias n='nvim'
 alias e="$EDITOR"
 alias g='git'
+alias d='docker'
 alias prj='project'
 alias p='project'
 
