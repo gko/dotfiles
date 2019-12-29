@@ -82,7 +82,7 @@ fi
 
 # in case you install fzf via brew
 if [ -d /usr/local/opt/fzf ]; then
-	if [[ ! "$PATH" == */Users/gk/.fzf/bin* ]]; then
+	if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
 		export PATH="${PATH:+${PATH}:}/usr/local/opt/fzf"
 	fi
 
