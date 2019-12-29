@@ -80,4 +80,15 @@ if [ -f ~/.zshrc.local ]; then
 	source ~/.zshrc.local
 fi
 
+# in case you install fzf via brew
+if [ -d /usr/local/opt/fzf ]; then
+	if [[ ! "$PATH" == */Users/gk/.fzf/bin* ]]; then
+		export PATH="${PATH:+${PATH}:}/usr/local/opt/fzf"
+	fi
+
+	[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
+
+	source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+fi
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
