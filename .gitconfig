@@ -52,8 +52,8 @@
 	# custom functions
 	changelog = "!git log --oneline --no-merges $1..HEAD"
 	difference = "!git log --oneline $1..$2"
-	# refresh the date of commits
-	refresh = "!git rebase HEAD~$1 --ignore-date"
+	# refresh the date of commits (https://dev.to/konstantin/refresh-commit-date-2cnh)
+	refresh = "!f() { git rebase HEAD~$1 --ignore-date; }; f"
 	local = "!git log --oneline --no-merges origin/$(git rev-parse --abbrev-ref HEAD).."
 	mindiff = diff -w --word-diff-regex=. --color-words -U0
 	overview = log --all --since='2 weeks' --oneline --no-merges
