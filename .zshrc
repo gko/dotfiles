@@ -92,3 +92,7 @@ if [ -d /usr/local/opt/fzf ]; then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Wasmer
+export WASMER_DIR="~/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
