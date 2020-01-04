@@ -91,8 +91,12 @@ if [ -d /usr/local/opt/fzf ]; then
 	source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -f ~/.fzf.zsh ]; then
+	source ~/.fzf.zsh
+fi
 
 # Wasmer
 export WASMER_DIR="~/.wasmer"
-[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+if [ -s "$WASMER_DIR/wasmer.sh" ]; then
+	source "$WASMER_DIR/wasmer.sh"
+fi
