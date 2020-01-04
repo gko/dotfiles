@@ -19,6 +19,11 @@ You can specify a persistent config in following files (in `~/` folder):
 
 They won't be rewritten during the installation
 
+If you want to copy all example `.local` config files from `.dotfiles` just run following:
+```shell
+cp ~/.dotfiles/*.local ~/
+```
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
