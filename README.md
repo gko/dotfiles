@@ -10,7 +10,7 @@ Run following command:
 curl -L https://raw.github.com/gko/dotfiles/master/install.sh | zsh
 ```
 
-## Custom config
+## User config
 
 You can specify a persistent config in following files (in `~/` folder):
 - [`.gitconfig.local`](/.gitconfig.local)
@@ -21,7 +21,7 @@ They won't be rewritten during the installation
 
 If you want to copy all example `.local` config files from `.dotfiles` just run following:
 ```shell
-cp ~/.dotfiles/*.local ~/
+cp ~/.dotfiles/.*.local ~/
 ```
 
 ## License
