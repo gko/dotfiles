@@ -35,6 +35,7 @@ alias v='vim'
 alias nv='nvim'
 alias n='nvim'
 alias e="$EDITOR"
+alias x='exit'
 alias g='git'
 alias d='docker'
 alias prj='project'
