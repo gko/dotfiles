@@ -1,5 +1,6 @@
 source ~/.dotfiles/settings/go.sh
 source ~/.dotfiles/settings/java.sh
+source ~/.dotfiles/settings/editor.sh
 
 case $OSTYPE in
 	linux*)
@@ -19,7 +20,6 @@ export HISTSIZE=6000
 # export HISTTIMEFORMAT="[%F %T] "
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
-export EDITOR=/usr/bin/vim
 export TERM=xterm
 export LANG=en_US.UTF-8
 
