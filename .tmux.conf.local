@@ -1,0 +1,16 @@
+set -g mode-keys vi
+bind-key : command-prompt
+
+# use vim-like keys for splits and windows
+bind-key v split-window -h
+bind-key s split-window -v
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
+# pane resizing
+bind -r H resize-pane -L 2
+bind -r J resize-pane -D 2
+bind -r K resize-pane -U 2
+bind -r L resize-pane -R 2
