@@ -17,7 +17,7 @@ antigen bundle gko/docker-alias
 
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle osx
+# antigen bundle osx
 antigen bundle web-search
 antigen bundle z
 antigen bundle dotenv
@@ -62,8 +62,10 @@ case `uname` in
 		;;
 esac
 
-# for VIM and TMUX
-export TERM=xterm-256color
+# let terminal/user decide (unless in tmux)
+if [ "$COLORTERM" = "gnome-terminal" ]; then
+	export TERM=gnome-256color
+fi
 
 if which tmux >/dev/null 2>&1; then
 	if [[ -z "$TMUX" ]] ;then
