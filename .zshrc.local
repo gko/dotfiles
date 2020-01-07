@@ -1,7 +1,9 @@
 # vim mode
 bindkey -v
 
-nvm use 12
+# unset PREFIX
+# nvm use --delete-prefix 12 --silent
+
 alias python=python3
 export ANDROID_HOME=/Users/gk/Library/Android/sdk
 export PATH=$PATH:~/.cargo/bin:~/go/bin

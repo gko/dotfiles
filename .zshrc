@@ -67,6 +67,10 @@ if [ "$COLORTERM" = "gnome-terminal" ]; then
 	export TERM=gnome-256color
 fi
 
+if [ "$TERM" = "xterm" ]; then
+	export TERM=xterm-256color
+fi
+
 if which tmux >/dev/null 2>&1; then
 	if [[ -z "$TMUX" ]] ;then
 		ID="$( tmux ls | grep -vm1 attached | cut -d: -f1 )" # get the id of a deattached session
