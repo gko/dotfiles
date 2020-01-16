@@ -1,9 +1,16 @@
 # vim mode
 bindkey -v
 
-# unset PREFIX
-# nvm use --delete-prefix 12 --silent
-
+nvm use 12
 alias python=python3
 export ANDROID_HOME=/Users/gk/Library/Android/sdk
 export PATH=$PATH:~/.cargo/bin:~/go/bin
+
+# switch colorscheme
+local current_hour=$(date +%H)
+if [[ $((current_hour > 7)) && $((current_hour <= 18)) ]]; then
+	rm -rf ~/.base16_theme
+	cp ~/.vim/.vimrc_background ~/
+else
+	base16_material-palenight
+fi
