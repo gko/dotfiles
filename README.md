@@ -24,6 +24,11 @@ If you want to copy all example `.local` config files from `.dotfiles` just run 
 cp ~/.dotfiles/.*.local ~/
 ```
 
+or to link them:
+```shell
+ln -sf ~/.dotfiles/.*.local ~/
+```
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
