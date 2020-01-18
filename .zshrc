@@ -31,6 +31,7 @@ antigen bundle github
 antigen bundle sbt
 antigen bundle cargo
 antigen bundle npm
+antigen bundle yarn
 
 # antigen bundle nightsense/cosmic_latte shell/cosmic_latte_light.sh
 # antigen bundle nightsense/snow shell/snow_light.sh
