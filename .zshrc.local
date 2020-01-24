@@ -3,15 +3,26 @@ bindkey -v
 
 # nvm use 12
 alias python=python3
+
 export ANDROID_HOME=/Users/gk/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 export PATH=$PATH:~/.cargo/bin:~/go/bin
 
 # switch colorscheme
 # between 7h and 18h keep the light theme
-local current_hour=$(date +%H)
-if [[ $current_hour -ge 7 && $current_hour -lt 18 ]]; then
-	base16_github
-	cp ~/.vim/.vimrc_background ~/
-else
-	base16_material-palenight
-fi
+function alter_theme() {
+	local current_hour=$(date +%H)
+	if [[ $current_hour -ge 7 && $current_hour -lt 18 ]]; then
+		base16_github
+		cp ~/.vim/.vimrc_background ~/
+	else
+		base16_material-palenight
+	fi
+}
+
+[[ -z $precmd_functions ]] && precmd_functions=()
+precmd_functions=($precmd_functions alter_theme)
