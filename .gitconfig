@@ -133,9 +133,13 @@
 	changed = green
 	untracked = cyan
 
-[mergetool]
+[merge]
 	keepBackup = false
 	tool = vimdiff
+	conflictstyle = diff3
+
+[mergetool]
+	prompt = false
 
 [diff]
 	tool = vimdiff

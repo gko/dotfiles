@@ -1,3 +1,9 @@
 [user]
 	email = mail@konstantin.io
 	name = Konstantin Gorodinskii
+
+[mergetool "opendiff"]
+	cmd = /Applications/WebStorm.app/Contents/MacOS/webstorm diff $PWD/$LOCAL $PWD/$REMOTE $PWD/$MERGED
+
+[mergetool "vimdiff"]
+	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
