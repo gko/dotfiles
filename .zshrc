@@ -4,6 +4,7 @@ setopt auto_cd
 # Include hidden files in autocomplete:
 _comp_options+=(globdots)
 
+source ~/.dotfiles/_functions.sh
 source ~/.dotfiles/aliases.sh
 source ~/.dotfiles/settings.sh
 
