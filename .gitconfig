@@ -11,7 +11,7 @@
 
 [alias]
 	a = add
-	A = add -A
+	aa = add -A
 	b = branch
 	del = branch -D
 	rename = "!git branch -m $2 $3 && git push $1 :$2 $3 -u #"
@@ -51,7 +51,6 @@
 	t = tag
 	set-url = remote set-url origin
 	modified = ls-files --modified --others --exclude-standard
-
 	# custom functions
 	changelog = "!git log --oneline --no-merges $1..HEAD"
 	difference = "!git log --oneline $1..$2"
@@ -67,7 +66,6 @@
 	wdiff = diff --word-diff
 	upstream = "!git fetch && git log --oneline --no-merges ..origin/$(git rev-parse --abbrev-ref HEAD)"
 	zip-modified = "!zip modified.zip $(git modified)"
-
 	# github(hub) shortcuts
 	o = browse --
 	open = browse --
@@ -81,7 +79,6 @@
 	releases = browse -- releases
 	settings = browse -- settings
 	wiki = browse -- wiki
-
 	# this function allows you to go through hub low level api with or without multiple pages
 	paginate = "!paginate() { local output cursor; output=\"$(\"$@\")\"; cursor=\"$(awk '/\\.hasNextPage/ { has_next=$2 } /\\.endCursor/ { if (has_next==\"true\") print $2 }' <<<\"$output\")\"; printf \"%s\\n\" \"$output\"; [ -z \"$cursor\" ] || paginate \"$@\" -f after=\"$cursor\"; }; paginate "
 	user = "!hub api --flat user | grep -e '\\.login' | awk '/.login/ {print $2}'"
@@ -92,6 +89,7 @@
 	repo = "!hub api \"repos/{owner}/{repo}\" --flat | awk '/\\.full_name\\t/ { print $2 }'"
 	rename-repo = "!f() { hub api --flat -XPATCH repos/{owner}/{repo} -f name=$1 | grep -e '\\.ssh_url' | awk '/.ssh_url/ {print $2}' | xargs git set-url; }; f"
 	comment = "!hub api \"repos/{owner}/{repo}/issues/$1/comments\" --raw-field \"body=$2\""
+	; alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 
 # push easily. http://stackoverflow.com/a/23918418/89484
 [push]

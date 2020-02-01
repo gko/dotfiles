@@ -24,7 +24,7 @@ antigen bundle z
 antigen bundle dotenv
 antigen bundle ytdl-org/youtube-dl
 
-antigen bundle git
+# antigen bundle git-prompt
 antigen bundle git-extras
 antigen bundle git-flow
 antigen bundle github/hub etc/hub
