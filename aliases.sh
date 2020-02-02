@@ -62,7 +62,7 @@ alias diff="diff --color=auto"
 alias ccat="highlight --out-format=ansi"
 
 # who listens on ports
-alias servers="netstat -tulpn"
+alias servers="netstat -tulp" #n"
 alias sniff="sudo ngrep -W byline -d 'wlp2s0' -t '^(GET|POST) ' 'tcp and port 80'"
 
 # generate aliases from gitconfig aliases
@@ -71,7 +71,7 @@ function generateAliasesFromGit() {
 		local aliasName=$(echo $gitAlias | sed -E 's/^alias\.([a-z_\-]*).*/\1/')
 
 		# alias only if there is no collision
-		if ! type "g$aliasName" > /dev/null; then
+		if ! type "g$aliasName" >/dev/null 2>&1; then
 			alias g$aliasName="git $aliasName"
 		fi
 	done
