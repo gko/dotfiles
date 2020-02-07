@@ -10,6 +10,19 @@ Run following command:
 curl -L https://raw.github.com/gko/dotfiles/master/install.sh | zsh
 ```
 
+### Configure italic font
+
+in your `.zshrc.local` add following lines:
+```shell
+tic -x xterm-256color-italic.terminfo
+tic -x tmux-256color.terminfo
+```
+
+#### Iterm
+
+In `iterm` then check the « Italic text » checkbox in `Settings` → `Profiles` → `Text`.
+Then in « Report terminal type » (`Settings` → `Profiles` → `Terminal`) set `xterm-256color-italic`.
+
 ## User config
 
 You can specify a persistent config in following files (in `~/` folder):
