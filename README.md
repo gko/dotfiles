@@ -20,7 +20,8 @@ tic -x tmux-256color.terminfo
 
 #### Iterm
 
-In `iterm` then check the « Italic text » checkbox in `Settings` → `Profiles` → `Text`.
+In `iterm` check the « Italic text » checkbox in `Settings` → `Profiles` → `Text`.
+
 Then in « Report terminal type » (`Settings` → `Profiles` → `Terminal`) set `xterm-256color-italic`.
 
 ## User config
