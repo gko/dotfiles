@@ -19,6 +19,8 @@ rm -rf ~/.dotfiles
 rm -rf ~/.antigen
 rm -rf ~/.tmux.conf
 rm -rf ~/.tmux/plugins/tpm
+rm -rf ~/tmux-256color.terminfo
+rm -rf ~/xterm-256color-italic.terminfo
 
 cd ~
 
@@ -42,6 +44,9 @@ ln -s ~/.dotfiles/dev ~/.tmux/dev
 
 ln -s ~/.dotfiles/.gitignore ~/.gitignore
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+
+ln -s ~/.dotfiles/tmux-256color.terminfo ~/tmux-256color.terminfo
+ln -s ~/.dotfiles/xterm-256color-italic.terminfo ~/xterm-256color-italic.terminfo
 
 echo "⚙️  installing antigen"
 curl -L git.io/antigen > ~/.dotfiles/antigen.zsh
