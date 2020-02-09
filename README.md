@@ -14,8 +14,8 @@ curl -L https://raw.github.com/gko/dotfiles/master/install.sh | zsh
 
 in your `.zshrc.local` add following lines:
 ```shell
-tic -x xterm-256color-italic.terminfo
-tic -x tmux-256color.terminfo
+tic -x ~/.dotfiles/xterm-256color-italic.terminfo
+tic -x ~/.dotfiles/tmux-256color.terminfo
 ```
 
 #### Iterm
