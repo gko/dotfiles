@@ -1,7 +1,7 @@
 # vim mode
 bindkey -v
 
-nvm use 12
+PREFIX= nvm use --delete-prefix 12
 alias python=python3
 
 export ANDROID_HOME=/Users/gk/Library/Android/sdk
@@ -34,4 +34,6 @@ tic -x  ~/.dotfiles/tmux-256color.terminfo
 # [[ -z $precmd_functions ]] && precmd_functions=()
 # precmd_functions=($precmd_functions alter_theme)
 
-source ~/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh
+if [ -f ~/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh ]; then  
+	source ~/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh            
+fi
