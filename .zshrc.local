@@ -1,7 +1,11 @@
 # vim mode
 bindkey -v
 
-PREFIX= nvm use --delete-prefix 12
+# prefix is a nightmare
+if [[ -z $PREFIX ]]; then
+	nvm use 12
+fi
+
 alias python=python3
 
 export ANDROID_HOME=/Users/gk/Library/Android/sdk
@@ -13,7 +17,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:~/.cargo/bin:~/go/bin
 
 tic -x ~/.dotfiles/xterm-256color-italic.terminfo
-tic -x  ~/.dotfiles/tmux-256color.terminfo
+tic -x ~/.dotfiles/tmux-256color.terminfo
 
 # switch colorscheme
 # between 7h and 18h keep the light theme
@@ -34,6 +38,13 @@ tic -x  ~/.dotfiles/tmux-256color.terminfo
 # [[ -z $precmd_functions ]] && precmd_functions=()
 # precmd_functions=($precmd_functions alter_theme)
 
-if [ -f ~/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh ]; then  
-	source ~/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh            
+if [ -d ~/.vim/plugged/gruvbox ]; then
+	case $OSTYPE in
+		linux*)
+			source ~/.vim/plugged/gruvbox/gruvbox_256palette.sh
+			;;
+		darwin*)
+			source ~/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh
+			;;
+	esac
 fi
