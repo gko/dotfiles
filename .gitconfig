@@ -13,6 +13,7 @@
 	a = add
 	aa = add -A
 	b = branch
+	remove-local = "!git branch | grep -v \"master\" | xargs git branch -D"
 	del = branch -D
 	rename = "!git branch -m $2 $3 && git push $1 :$2 $3 -u #"
 	c = commit
