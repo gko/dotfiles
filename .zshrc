@@ -109,3 +109,6 @@ export WASMER_DIR="~/.wasmer"
 if [ -s "$WASMER_DIR/wasmer.sh" ]; then
 	source "$WASMER_DIR/wasmer.sh"
 fi
+
+# https://github.com/zsh-users/zsh-autosuggestions/issues/422#issuecomment-485890936
+typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE='1000'
