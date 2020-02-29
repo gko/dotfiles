@@ -16,9 +16,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH=$PATH:~/.cargo/bin:~/go/bin
 
-tic -x ~/.dotfiles/xterm-256color-italic.terminfo
-tic -x ~/.dotfiles/tmux-256color.terminfo
-
 if [ -d ~/.vim/plugged/gruvbox ]; then
 	case $OSTYPE in
 		linux*)
@@ -29,3 +26,11 @@ if [ -d ~/.vim/plugged/gruvbox ]; then
 			;;
 	esac
 fi
+
+if type "compaudit" > /dev/null; then
+	# http://github.com/zplug/zplug/issues/514#issuecomment-491848352
+	compaudit | xargs -r chmod go-w
+fi
+
+tic -x ~/.dotfiles/xterm-256color-italic.terminfo
+tic -x ~/.dotfiles/tmux-256color.terminfo
