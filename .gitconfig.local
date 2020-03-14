@@ -2,8 +2,21 @@
 	email = mail@konstantin.io
 	name = Konstantin Gorodinskii
 
-[mergetool "opendiff"]
-	cmd = /Applications/WebStorm.app/Contents/MacOS/webstorm diff $PWD/$LOCAL $PWD/$REMOTE $PWD/$MERGED
+[difftool "webstorm"]
+	cmd = /Applications/WebStorm.app/Contents/MacOS/webstorm diff "$PWD/$LOCAL" "$PWD/$REMOTE"
+
+[mergetool "webstorm"]
+	cmd = /Applications/WebStorm.app/Contents/MacOS/webstorm merge "$PWD/$LOCAL" "$PWD/$REMOTE" "$PWD/$MERGED"
 
 [mergetool "vimdiff"]
 	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+
+[merge]
+	keepBackup = false
+	tool = webstorm
+
+[diff]
+	tool = webstorm
+
+[pull]
+	rebase = true
