@@ -16,16 +16,16 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH=$PATH:~/.cargo/bin:~/go/bin
 
-if [ -d ~/.vim/plugged/gruvbox ]; then
-	case $OSTYPE in
-		linux*)
-			source ~/.vim/plugged/gruvbox/gruvbox_256palette.sh
-			;;
-		darwin*)
-			source ~/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh
-			;;
-	esac
-fi
+# if [ -d ~/.vim/plugged/gruvbox ]; then
+	# case $OSTYPE in
+		# linux*)
+			# source ~/.vim/plugged/gruvbox/gruvbox_256palette.sh
+			# ;;
+		# darwin*)
+			# source ~/.vim/plugged/gruvbox/gruvbox_256palette_osx.sh
+			# ;;
+	# esac
+# fi
 
 if type "compaudit" > /dev/null; then
 	# http://github.com/zplug/zplug/issues/514#issuecomment-491848352
