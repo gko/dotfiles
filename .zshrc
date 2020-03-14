@@ -113,3 +113,5 @@ fi
 
 # https://github.com/zsh-users/zsh-autosuggestions/issues/422#issuecomment-485890936
 typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE='1000'
+
+export PATH=$PATH:~/bin
