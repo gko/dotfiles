@@ -29,6 +29,7 @@ antigen bundle git-extras
 antigen bundle git-flow
 antigen bundle github/hub etc/hub
 antigen bundle github
+antigen bundle paulirish/git-open
 
 antigen bundle sbt
 antigen bundle cargo

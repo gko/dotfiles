@@ -68,7 +68,7 @@
 	upstream = "!git fetch && git log --oneline --no-merges ..origin/$(git rev-parse --abbrev-ref HEAD)"
 	zip-modified = "!zip modified.zip $(git modified)"
 	# github(hub) shortcuts
-	o = browse --
+	o = "!git open"
 	open = browse --
 	view = browse --
 	actions = browse -- actions
