@@ -114,8 +114,9 @@ fi
 # https://github.com/zsh-users/zsh-autosuggestions/issues/422#issuecomment-485890936
 typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE='1000'
 
-if type "gh" > /dev/null; then
-	eval "$(gh completion)"
-fi
+# there is a bug in gh
+# if type "gh" > /dev/null; then
+# eval "$(gh completion)"
+# fi
 
 export PATH=$PATH:~/bin
