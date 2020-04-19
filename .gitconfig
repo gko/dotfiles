@@ -36,6 +36,8 @@
 	p = push
 	pu = pull
 	r = reset
+	rh = reset --hard
+	rs = reset --soft
 	hard = reset --hard
 	soft = reset --soft
 	unstage = reset HEAD
@@ -91,6 +93,9 @@
 	rename-repo = "!f() { hub api --flat -XPATCH repos/{owner}/{repo} -f name=$1 | grep -e '\\.ssh_url' | awk '/.ssh_url/ {print $2}' | xargs git set-url; }; f"
 	comment = "!hub api \"repos/{owner}/{repo}/issues/$1/comments\" --raw-field \"body=$2\""
 	; alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	wa = worktree add
+	wr = worktree remove
+	wl = worktree list
 
 # push easily. http://stackoverflow.com/a/23918418/89484
 [push]
