@@ -4,6 +4,8 @@ bindkey -v
 # prefix is a nightmare
 if [[ -z $PREFIX ]]; then
 	nvm use 12
+
+	export NODE_PATH=$NODE_PATH:`npm root -g`
 fi
 
 alias python=python3
