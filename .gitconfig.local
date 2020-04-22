@@ -3,10 +3,15 @@
 	name = Konstantin Gorodinskii
 
 [difftool "webstorm"]
-	cmd = /Applications/WebStorm.app/Contents/MacOS/webstorm diff "$PWD/$LOCAL" "$PWD/$REMOTE"
+	cmd = /Applications/WebStorm.app/Contents/MacOS/webstorm diff $(cd $(dirname \"$LOCAL\") && pwd)/$(basename \"$LOCAL\") $(cd $(dirname \"$REMOTE\") && pwd)/$(basename \"$REMOTE\")
+  trustExitCode = true
+
+[difftool "diff-so-fancy"]
+	cmd = diff-so-fancy
 
 [mergetool "webstorm"]
-	cmd = /Applications/WebStorm.app/Contents/MacOS/webstorm merge "$PWD/$LOCAL" "$PWD/$REMOTE" "$PWD/$MERGED"
+	cmd = /Applications/WebStorm.app/Contents/MacOS/webstorm merge $(cd $(dirname \"$LOCAL\") && pwd)/$(basename \"$LOCAL\") $(cd $(dirname \"$REMOTE\") && pwd)/$(basename \"$REMOTE\") $(cd $(dirname \"$BASE\") && pwd)/$(basename \"$BASE\") $(cd $(dirname \"$MERGED\") && pwd)/$(basename \"$MERGED\")
+	trustExitCode = true
 
 [mergetool "vimdiff"]
 	cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
