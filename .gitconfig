@@ -101,6 +101,7 @@
 	wr = worktree remove
 	wl = worktree list
 	wm = worktree move
+	wcd = "!f() { cd `git worktree list | grep -e \"\\[$1\\]$\" | rev | cut -d \" \" -f3- | rev`; }; f"
 
 # push easily. http://stackoverflow.com/a/23918418/89484
 [push]
