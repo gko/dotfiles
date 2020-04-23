@@ -97,6 +97,7 @@
 	wa = worktree add
 	wr = worktree remove
 	wl = worktree list
+	wm = worktree move
 
 # push easily. http://stackoverflow.com/a/23918418/89484
 [push]
