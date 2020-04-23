@@ -93,6 +93,7 @@
 	rename-repo = "!f() { hub api --flat -XPATCH repos/{owner}/{repo} -f name=$1 | grep -e '\\.ssh_url' | awk '/.ssh_url/ {print $2}' | xargs git set-url; }; f"
 	comment = "!hub api \"repos/{owner}/{repo}/issues/$1/comments\" --raw-field \"body=$2\""
 	; alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	w = worktree
 	wa = worktree add
 	wr = worktree remove
 	wl = worktree list
