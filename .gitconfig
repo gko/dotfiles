@@ -15,7 +15,8 @@
 	b = branch
 	remove-local = "!git branch | grep -v \"master\" | xargs git branch -D"
 	del = branch -D
-	rename = "!git branch -m $2 $3 && git push $1 :$2 $3 -u #"
+	; either 2 arguments: `from` and `to`, or just `to` if you're on the branch already
+	rename = "!f() { [[ $# = 2 ]] && local from=$1 || local from=`git symbolic-ref -q --short HEAD`; local to=${2:-$1}; git branch -m $from $to; git push --no-verify origin :$from $to; git push --no-verify origin -u $to; }; f"
 	c = commit
 	amend = commit --amend
 	cl = clone
