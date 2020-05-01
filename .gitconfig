@@ -30,6 +30,8 @@
 	graph = log --graph --pretty=oneline --abbrev-commit --decorate --all
 	l = log
 	last = log -1 HEAD
+	file-commits = "!f() { git log --pretty=\"%H\" --follow \"$1\"; }; f"
+	file-commits-since = "!f() { git log --pretty=\"%H\" --follow ${2:-master}.. \"$1\"; }; f"
 	m = merge
 	mt = mergetool
 	master = checkout master
