@@ -9,6 +9,7 @@ if [[ -z $PREFIX ]]; then
 fi
 
 alias python=python3
+alias todo="$EDITOR ~/Documents/Notes/todo.md"
 
 export ANDROID_HOME=/Users/gk/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
