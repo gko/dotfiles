@@ -20,6 +20,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export PATH=$PATH:~/.cargo/bin:~/go/bin
+export PATH=$PATH:~/bin
 
 # if [ -d ~/.vim/plugged/gruvbox ]; then
 	# case $OSTYPE in
