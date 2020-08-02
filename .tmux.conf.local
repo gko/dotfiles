@@ -1,6 +1,7 @@
 set -g mode-keys vi
 bind-key : command-prompt
 bind-key ! break-pane -t :
+bind-key T break-pane -t :
 
 # use vim-like keys for splits and windows
 bind-key v split-window -h
