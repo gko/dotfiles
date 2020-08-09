@@ -31,6 +31,9 @@
 	graph = log --graph --pretty=oneline --abbrev-commit --decorate --all
 	l = log
 
+	# requires FZF
+	autofixup = "!f() { COMMIT=$(git log --pretty=oneline | fzf | awk '{print $1}'); git commit --fixup $COMMIT; GIT_SEQUENCE_EDITOR=: git rebase --autostash --autosquash -i $COMMIT^; }; f"
+
 	# fshow - git commit browser
 	# https://gist.github.com/junegunn/f4fca918e937e6bf5bad#gistcomment-1666125
 	fshow = "!f() { \
@@ -165,5 +168,6 @@
 
 [hub]
 	protocol = ssh
+
 [init]
 	defaultBranch = main
