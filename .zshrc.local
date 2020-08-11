@@ -3,7 +3,7 @@ bindkey -v
 
 # prefix is a nightmare
 if [[ -z $PREFIX ]]; then
-	nvm use 12
+	nvm use 14
 
 	export NODE_PATH=$NODE_PATH:`npm root -g`
 fi
