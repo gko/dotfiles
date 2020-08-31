@@ -1,13 +1,6 @@
 # vim mode
 bindkey -v
 
-# prefix is a nightmare
-if [[ -z $PREFIX ]]; then
-	nvm use 14
-
-	export NODE_PATH=$NODE_PATH:`npm root -g`
-fi
-
 alias python=python3
 
 alias notes="mkdir -p ~/Documents/Notes/ && $EDITOR ~/Documents/Notes/index.md"

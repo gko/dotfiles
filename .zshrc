@@ -75,7 +75,7 @@ if [ "$TERM" = "xterm" ]; then
 	export TERM=xterm-256color
 fi
 
-if which tmux >/dev/null 2>&1; then
+if [ $commands[tmux] ]; then
 	if [[ -z "$TMUX" ]] ;then
 		ID="$( tmux ls | grep -vm1 attached | cut -d: -f1 )" # get the id of a deattached session
 		if [[ -z "$ID" ]] ;then # if not available create a new one
@@ -114,7 +114,7 @@ fi
 # https://github.com/zsh-users/zsh-autosuggestions/issues/422#issuecomment-485890936
 typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE='1000'
 
-if type "gh" > /dev/null; then
+if [ $commands[gh] ]; then
 	eval "$(gh completion -s zsh)"
 fi
 
