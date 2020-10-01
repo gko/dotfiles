@@ -1,5 +1,6 @@
 source ~/.dotfiles/aliases/network.sh
 source ~/.dotfiles/aliases/youtube-dl.sh
+source ~/.dotfiles/aliases/please.sh
 source ~/.dotfiles/aliases/git.sh
 
 # https://github.com/LukeSmithxyz/voidrice/blob/efa9fffae21abdcf207678655a446770082afd9a/.config/aliasrc#L17
@@ -33,6 +34,7 @@ alias o="open"
 # overall
 alias video2gif="echo -e \"\n  writing to ~/out.gif\n\" && ffmpeg -vf scale=640:-1 -gifflags +transdiff ~/out.gif -i"
 alias clr="clear"
+alias pls="please"
 alias c="clear"
 alias vi='vim'
 alias v='vim'
