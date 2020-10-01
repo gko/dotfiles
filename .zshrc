@@ -21,7 +21,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 # antigen bundle osx
 antigen bundle web-search
 antigen bundle z
-antigen bundle dotenv
+# antigen bundle dotenv
 antigen bundle ytdl-org/youtube-dl
 
 # antigen bundle git-prompt
