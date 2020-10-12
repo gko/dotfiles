@@ -4,6 +4,7 @@
 
 [core]
 	excludesfile = ~/.gitignore
+	logAllRefUpdates = true
 ; let the $EDITOR variable decide that
 ; editor = vim
 ; diff-so-fancy
@@ -81,8 +82,7 @@
 	local = "!git log --oneline --no-merges origin/$(git rev-parse --abbrev-ref HEAD).."
 	mindiff = diff -w --word-diff-regex=. --color-words -U0
 	overview = log --all --since='2 weeks' --oneline --no-merges
-	recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format="%(refname:short)"
-	checkout-recent = "!git recent | fzf --no-sort --bind='ctrl-m:execute(git checkout {})+abort'"
+	recent = "!git for-each-ref --count=10 --sort=-committerdate refs/heads/ --format=\"%(refname:short)\" | fzf --no-sort --bind='ctrl-m:execute(git checkout {})+abort'"
 	sneak = commit -a --amend --no-edit
 	stats = shortlog -sn
 	today = "!git log --since='00:00:00' --all --no-merges --oneline --author=$(git config user.email)"
