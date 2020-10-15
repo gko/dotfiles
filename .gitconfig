@@ -32,6 +32,8 @@
 	f = fetch
 	graph = log --graph --pretty=oneline --abbrev-commit --decorate --all
 	l = log
+	w = worktree
+	wt = worktree
 
 	# requires FZF
 	autofixup = "!f() { COMMIT=$(git log --pretty=oneline | fzf | awk '{print $1}'); git commit --fixup $COMMIT; GIT_SEQUENCE_EDITOR=: git rebase --autostash --autosquash -i $COMMIT^; }; f"
