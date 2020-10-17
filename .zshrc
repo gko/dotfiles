@@ -44,7 +44,7 @@ antigen theme gko/heart
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # NVM bundle
-export NVM_LAZY_LOAD=true
+export NVM_LAZY_LOAD=false
 antigen bundle lukechilds/zsh-nvm
 
 antigen apply
