@@ -22,6 +22,7 @@
 
 [diff]
 	tool = webstorm
+	colorMoved = default
 
 [pull]
 	rebase = true
