@@ -7,8 +7,6 @@
 	logAllRefUpdates = true
 ; let the $EDITOR variable decide that
 ; editor = vim
-; diff-so-fancy
-; pager = diff-so-fancy | less --tabs=4 -RFX
 
 [alias]
 	a = add
