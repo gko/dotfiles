@@ -2,6 +2,18 @@
 	email = mail@konstantin.io
 	name = Konstantin Gorodinskii
 
+[core]
+	pager = delta
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	features = unobtrusive-line-numbers decorations
+	whitespace-error-style = 22 reverse
+	; syntax-theme = Github
+	; side-by-side = true
+
 [difftool "webstorm"]
 	cmd = /Applications/WebStorm.app/Contents/MacOS/webstorm diff $(cd $(dirname \"$LOCAL\") && pwd)/$(basename \"$LOCAL\") $(cd $(dirname \"$REMOTE\") && pwd)/$(basename \"$REMOTE\")
   trustExitCode = true
