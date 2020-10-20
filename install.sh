@@ -12,6 +12,7 @@ rm -f ~/.zshrc
 rm -f ~/.bashrc
 rm -f ~/.bash_profile
 rm -f ~/.gitconfig
+rm -f ~/.gitattributes
 rm -f ~/.gitignore
 rm -f ~/.bash_profile
 rm -rf ~/dotfiles
@@ -40,8 +41,9 @@ ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
 # dev session with vim and 3 split layout
 ln -s ~/.dotfiles/dev ~/.tmux/dev
 
-ln -s ~/.dotfiles/.gitignore ~/.gitignore
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/.dotfiles/.gitignore ~/.gitignore
+ln -s ~/.dotfiles/.gitattributes ~/.gitattributes
 
 echo "⚙️  installing antigen"
 curl -L git.io/antigen > ~/.dotfiles/antigen.zsh

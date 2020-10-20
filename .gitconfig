@@ -5,8 +5,10 @@
 [core]
 	excludesfile = ~/.gitignore
 	logAllRefUpdates = true
-; let the $EDITOR variable decide that
-; editor = vim
+	; https://tekin.co.uk/2020/10/better-git-diff-output-for-ruby-python-elixir-and-more
+	attributesfile = ~/.gitattributes
+	; let the $EDITOR variable decide that
+	; editor = vim
 
 [alias]
 	a = add
