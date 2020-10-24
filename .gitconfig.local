@@ -4,7 +4,8 @@
 
 [core]
 	; pager = delta --light
-	pager = delta
+	; pager = delta
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
 [interactive]
 	diffFilter = delta --color-only

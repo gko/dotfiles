@@ -138,8 +138,8 @@
 	pager = true
 
 [color "diff"]
-	meta = yellow
-	commit = yellow
+	meta = 11
+	commit = yellow bold
 	frag = magenta bold
 	old = red bold
 	new = green bold
