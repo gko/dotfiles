@@ -34,6 +34,10 @@
 	l = log
 	w = worktree
 	wt = worktree
+	wa = worktree add
+	wr = worktree remove
+	wl = worktree list
+	wm = worktree move
 
 	# requires FZF
 	autofixup = "!f() { COMMIT=$(git log --pretty=oneline | fzf | awk '{print $1}'); git commit --fixup $COMMIT; GIT_SEQUENCE_EDITOR=: git rebase --autostash --autosquash -i $COMMIT^; }; f"
@@ -92,35 +96,28 @@
 	wdiff = diff --word-diff
 	upstream = "!git fetch && git log --oneline --no-merges ..origin/$(git rev-parse --abbrev-ref HEAD)"
 	zip-modified = "!zip modified.zip $(git modified)"
-	# github(hub) shortcuts
-	o = "!git open"
-	open = browse --
-	view = browse --
-	actions = browse -- actions
-	code = browse --
-	issues = browse -- issues
-	projects = browse -- projects
-	pulls = browse -- pulls
-	pulse = browse -- pulse
-	releases = browse -- releases
-	settings = browse -- settings
-	wiki = browse -- wiki
-	# this function allows you to go through hub low level api with or without multiple pages
-	paginate = "!paginate() { local output cursor; output=\"$(\"$@\")\"; cursor=\"$(awk '/\\.hasNextPage/ { has_next=$2 } /\\.endCursor/ { if (has_next==\"true\") print $2 }' <<<\"$output\")\"; printf \"%s\\n\" \"$output\"; [ -z \"$cursor\" ] || paginate \"$@\" -f after=\"$cursor\"; }; paginate "
-	user = "!hub api --flat user | grep -e '\\.login' | awk '/.login/ {print $2}'"
-	repos = "!repos() { local user=\"${1?}\";shift 1; git paginate hub api -t graphql -f user=\"$user\" \"$@\" \
+	; open = "!gh repo view --web"
+	o = !git open
+	code = open
+	view = open
+	; actions = browse -- actions
+	; issues = browse -- issues
+	; projects = browse -- projects
+	; pulls = browse -- pulls
+	; pulse = browse -- pulse
+	; releases = browse -- releases
+	; settings = browse -- settings
+	; wiki = browse -- wiki
+	user = "!gh api user | sed -E 's/.*\"login\":\"?([^,\"]*)\"?.*/\\1/'"
+	repos = "!repos() { local user=\"${1?}\";shift 1; gh api --paginate graphql -f user=\"$user\" \"$@\" \
 		-f query='query($user: String!, $per_page: Int = 100, $after: String) { user(login: $user) { \
 		repositories(first: $per_page, after: $after) { nodes { nameWithOwner }, pageInfo { hasNextPage, endCursor } } } }';}; \
-		repos \"$(git user)\" | awk '/\\.nameWithOwner\\t/ { print $2 }';"
-	repo = "!hub api \"repos/{owner}/{repo}\" --flat | awk '/\\.full_name\\t/ { print $2 }'"
-	rename-repo = "!f() { hub api --flat -XPATCH repos/{owner}/{repo} -f name=$1 | grep -e '\\.ssh_url' | awk '/.ssh_url/ {print $2}' | xargs git set-url; }; f"
-	comment = "!hub api \"repos/{owner}/{repo}/issues/$1/comments\" --raw-field \"body=$2\""
+		repos \"$(git user)\" | sed -E 's/}/\\\n/g' | grep \"nameWithOwner\" | sed -E 's/.*\"nameWithOwner\":\"?([^,\"]*)\"?.*/\\1/g'"
+	repo = "!gh api repos/:owner/:repo | sed -E 's/.*\"full_name\":\"?([^,\"]*)\"?.*/\\1/'"
+	rename-repo = "!f() { gh api -XPATCH repos/:owner/:repo -f name=$1 | grep -e \"ssh_url\" | sed -E 's/.*\"ssh_url\":\"?([^,\"]*)\"?.*/\\1/' | xargs git set-url; }; f"
+	# git comment 7 "some comment"
+	comment = "!f() { gh api --silent \"repos/:owner/:repo/issues/$1/comments\" --raw-field \"body=$2\"; }; f"
 	; alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
-	w = worktree
-	wa = worktree add
-	wr = worktree remove
-	wl = worktree list
-	wm = worktree move
 
 # push easily. http://stackoverflow.com/a/23918418/89484
 [push]
