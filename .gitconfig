@@ -100,14 +100,6 @@
 	o = !git open
 	code = open
 	view = open
-	; actions = browse -- actions
-	; issues = browse -- issues
-	; projects = browse -- projects
-	; pulls = browse -- pulls
-	; pulse = browse -- pulse
-	; releases = browse -- releases
-	; settings = browse -- settings
-	; wiki = browse -- wiki
 	user = "!gh api user | sed -E 's/.*\"login\":\"?([^,\"]*)\"?.*/\\1/'"
 	repos = "!repos() { local user=\"${1?}\";shift 1; gh api --paginate graphql -f user=\"$user\" \"$@\" \
 		-f query='query($user: String!, $per_page: Int = 100, $after: String) { user(login: $user) { \
@@ -167,9 +159,6 @@
 
 [credential]
 	UseHttpPath = true
-
-[hub]
-	protocol = ssh
 
 [init]
 	defaultBranch = main
