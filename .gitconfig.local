@@ -3,6 +3,7 @@
 	name = Konstantin Gorodinskii
 
 [core]
+	; pager = delta --light
 	pager = delta
 
 [interactive]
