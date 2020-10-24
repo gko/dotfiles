@@ -34,7 +34,6 @@ alias o="open"
 # overall
 alias video2gif="echo -e \"\n  writing to ~/out.gif\n\" && ffmpeg -vf scale=640:-1 -gifflags +transdiff ~/out.gif -i"
 alias clr="clear"
-alias pls="please"
 alias c="clear"
 alias vi='vim'
 alias v='vim'

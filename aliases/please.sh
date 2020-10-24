@@ -7,3 +7,5 @@ please() {
 		sudo "$BASH" -c "$(history -p !!)"
 	fi
 }
+
+alias pls="please"
