@@ -92,7 +92,8 @@
 	sneak = commit -a --amend --no-edit
 	stats = shortlog -sn
 	today = "!git log --since='00:00:00' --all --no-merges --oneline --author=$(git config user.email)"
-	yesterday = "!git log --since='1 day ago 00:00:00' --before='00:00:00' --all --no-merges --oneline --author=$(git config user.email)"
+	yesterday = "!git log --since='1 day ago 00:00:00' --before='1 day ago 23:59:59' --all --no-merges --oneline --author=$(git config user.email)"
+	last-friday="!git log --since='last friday 00:00:00' --before='last friday 23:59:59' --all --no-merges --oneline --author=$(git config user.email)"
 	wdiff = diff --word-diff
 	upstream = "!git fetch && git log --oneline --no-merges ..origin/$(git rev-parse --abbrev-ref HEAD)"
 	zip-modified = "!zip modified.zip $(git modified)"
