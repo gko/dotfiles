@@ -21,7 +21,7 @@
 	c = commit
 	amend = commit --amend
 	abort = "!git rebase --abort 2>/dev/null || git merge --abort 2>/dev/null"
-	cl = clone
+	cl = "!f() { [[ \"$*\" =~ ^.*(https:|git@|git:).*$ || \"$*\" =~ ^.*(\\.git[[:space:]]).*$  || \"$*\" =~ ^.*(\\.git)$ ]] && git clone \"$@\" || gh repo clone -- \"$@\"; }; f"
 	co = checkout
 	contains = describe --all --contains
 	d = diff
