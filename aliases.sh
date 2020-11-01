@@ -41,7 +41,13 @@ alias nv='nvim'
 alias n='nvim'
 alias e="$EDITOR"
 alias x='exit'
+
 alias g='git'
+alias ga='git add'
+alias gA='git add -A'
+alias gp='git push'
+alias gpu='git pull'
+
 alias d='docker'
 alias prj='project'
 alias p='project'
