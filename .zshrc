@@ -72,11 +72,17 @@ fi
 
 if [ $commands[tmux] ]; then
 	if [[ -z "$TMUX" ]] ;then
+		export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
 		ID="$( tmux ls | grep -vm1 attached | cut -d: -f1 )" # get the id of a deattached session
+
 		if [[ -z "$ID" ]] ;then # if not available create a new one
-			tmux new-session
+			# https://gitlab.com/gnachman/iterm2/-/wikis/tmux-Integration-Best-Practices#how-do-i-use-shell-integration
+			# https://www.iterm2.com/documentation-shell-integration.html
+			# [[ -z "$ITERM_SESSION_ID" ]] && tmux new-session -s main || tmux -CC new-session -s main
+			tmux new-session -s main
 		else
-			tmux attach-session -t "$ID" # if available attach to it
+			# [[ -z "$ITERM_SESSION_ID" ]] && tmux attach-session -t "$ID" || tmux -CC attach-session -t "$ID" # if available attach to it
+			tmux attach-session -t "$ID"
 		fi
 	fi
 fi
@@ -114,3 +120,5 @@ if [ $commands[gh] ]; then
 fi
 
 export PATH=$PATH:~/bin
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
