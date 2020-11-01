@@ -45,6 +45,7 @@ alias x='exit'
 alias g='git'
 alias ga='git add'
 alias gA='git add -A'
+alias gaa='git add -A'
 alias gp='git push'
 alias gpu='git pull'
 
