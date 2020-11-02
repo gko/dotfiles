@@ -48,6 +48,7 @@ alias gA='git add -A'
 alias gaa='git add -A'
 alias gp='git push'
 alias gpu='git pull'
+alias gco='git checkout'
 
 alias d='docker'
 alias prj='project'
