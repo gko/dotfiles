@@ -17,11 +17,11 @@
 	remove-local = "!git branch | grep -v \"master\" | xargs git branch -D"
 	del = branch -D
 	; either 2 arguments: `from` and `to`, or just `to` if you're on the branch already
-	rename = "!f() { [[ $# = 2 ]] && local from=$1 || local from=`git symbolic-ref -q --short HEAD`; local to=${2:-$1}; git branch -m $from $to; git push --no-verify origin :$from $to; git push --no-verify origin -u $to; }; f"
+	rename = "!f() { [ $# = 2 ] && local from=$1 || local from=`git symbolic-ref -q --short HEAD`; local to=${2:-$1}; git branch -m $from $to; git push --no-verify origin :$from $to; git push --no-verify origin -u $to; }; f"
 	c = commit
 	amend = commit --amend
 	abort = "!git rebase --abort 2>/dev/null || git merge --abort 2>/dev/null"
-	cl = "!f() { [[ \"$*\" =~ ^.*(https:|git@|git:).*$ || \"$*\" =~ ^.*(\\.git[[:space:]]).*$  || \"$*\" =~ ^.*(\\.git)$ ]] && git clone \"$@\" || gh repo clone -- \"$@\"; }; f"
+	cl = "!f() { [ \"$*\" =~ ^.*(https:|git@|git:).*$ || \"$*\" =~ ^.*(\\.git[[:space:]]).*$  || \"$*\" =~ ^.*(\\.git)$ ] && git clone \"$@\" || gh repo clone -- \"$@\"; }; f"
 	co = checkout
 	contains = describe --all --contains
 	d = diff
