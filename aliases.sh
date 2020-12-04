@@ -43,12 +43,15 @@ alias e="$EDITOR"
 alias x='exit'
 
 alias g='git'
+alias gc='git commit'
 alias ga='git add'
 alias gA='git add -A'
 alias gaa='git add -A'
 alias gp='git push'
 alias gpu='git pull'
 alias gco='git checkout'
+alias gs='git status'
+alias gd='git diff'
 
 alias d='docker'
 alias prj='project'
