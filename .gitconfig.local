@@ -3,12 +3,12 @@
 	name = Konstantin Gorodinskii
 
 [core]
-	; pager = delta --light
+	pager = delta --light
 	; pager = delta
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	; pager = diff-so-fancy | less --tabs=4 -RFX
 
 [interactive]
-	diffFilter = delta --color-only
+	diffFilter = delta --color-only --light
 
 [delta]
 	features = unobtrusive-line-numbers decorations
