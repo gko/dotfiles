@@ -2,6 +2,7 @@
 bindkey -v
 
 alias python=python3
+alias pip=pip3
 
 alias notes="mkdir -p ~/Documents/Notes/ && $EDITOR ~/Documents/Notes/index.md"
 alias todo="mkdir -p ~/Documents/Notes/ && $EDITOR ~/Documents/Notes/todo.md"
@@ -45,3 +46,5 @@ fshow() {
                 {}
 FZF-EOF"
 }
+
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
