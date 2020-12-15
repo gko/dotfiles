@@ -52,6 +52,7 @@ alias gpu='git pull'
 alias gco='git checkout'
 alias gs='git status'
 alias gd='git diff'
+alias gl='git log'
 
 alias d='docker'
 alias prj='project'
