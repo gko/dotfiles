@@ -68,3 +68,4 @@ alias -- -="cd -"
 alias grep="grep --color=auto"
 alias diff="diff --color=auto"
 alias ccat="highlight --out-format=ansi"
+alias download_website='wget -H -E -k -p '
