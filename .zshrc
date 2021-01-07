@@ -20,7 +20,7 @@ antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle web-search
 antigen bundle z
-# antigen bundle ytdl-org/youtube-dl
+antigen bundle ytdl-org/youtube-dl
 
 antigen bundle git-extras
 antigen bundle git-flow
