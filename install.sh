@@ -7,7 +7,7 @@ if ! [[ "$answer" =~ [yY] ]]; then
 	exit 0;
 fi
 
-echo "🚧 removing current dotfiles"
+echo -e "\n🚧 removing current dotfiles"
 rm -f ~/.zshrc
 rm -f ~/.bashrc
 rm -f ~/.bash_profile
