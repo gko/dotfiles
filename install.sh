@@ -30,10 +30,10 @@ git clone --depth 1 -b master --recursive https://github.com/gko/dotfiles
 
 echo "⬇️  installing tmux plugins"
 mkdir ~/.tmux/plugins
-git clone --depth 1 https://github.com/tmux-plugins/tmux-plugins/tmux-sensible ~/.tmux/plugins/tmux-sensible
-git clone --depth 1 https://github.com/tmux-plugins/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect
-git clone --depth 1 https://github.com/tmux-plugins/tmux-plugins/tmux-continuum ~/.tmux/plugins/tmux-continuum
-git clone --depth 1 https://github.com/tmux-plugins/tmux-plugins/tmux-yank ~/.tmux/plugins/tmux-yank
+git clone --depth 1 https://github.com/tmux-plugins/tmux-sensible ~/.tmux/plugins/tmux-sensible
+git clone --depth 1 https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect
+git clone --depth 1 https://github.com/tmux-plugins/tmux-continuum ~/.tmux/plugins/tmux-continuum
+git clone --depth 1 https://github.com/tmux-plugins/tmux-yank ~/.tmux/plugins/tmux-yank
 
 curl https://raw.githubusercontent.com/chriskempson/base16-xresources/master/xresources/base16-default-dark-256.Xresources >> ~/.Xresources
 
