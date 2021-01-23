@@ -26,7 +26,7 @@ cd ~
 echo "⬇️  downloading latest version"
 # for testing purposes
 # cp -R ~/projects/dotfiles ~/dotfiles
-git clone --depth 1 -b master --recursive https://github.com/gko/dotfiles
+git clone --depth 1 -b main --recursive https://github.com/gko/dotfiles
 
 echo "⬇️  installing tmux plugins"
 mkdir -p ~/.tmux/plugins
