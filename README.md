@@ -1,13 +1,13 @@
 # Dotfiles
 
 My dotfiles config.
-![screenshot](https://github.com/gko/dotfiles/raw/master/screenshot.png)
+![screenshot](https://github.com/gko/dotfiles/raw/main/screenshot.png)
 
 ## Installation
 
 Run following command:
 ```shell
-curl -L https://raw.github.com/gko/dotfiles/master/install.sh | zsh
+curl -L https://raw.github.com/gko/dotfiles/main/install.sh | zsh
 ```
 
 ### Configure italic font
