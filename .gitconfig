@@ -59,6 +59,7 @@
 	m = merge
 	mt = mergetool
 	master = checkout master
+	main = checkout main
 	p = push
 	pu = pull
 	r = reset
