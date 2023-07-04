@@ -1,0 +1,15 @@
+# https://beebom.com/how-hide-desktop-icons-mac/
+function hideDesktopIcons() {
+	defaults write com.apple.finder CreateDesktop false;
+	killall Finder;
+}
+
+function showDesktopIcons() {
+	defaults write com.apple.finder CreateDesktop true;
+	killall Finder;
+}
+
+
+# https://stackoverflow.com/a/61121564
+
+# https://stackoverflow.com/a/61657770

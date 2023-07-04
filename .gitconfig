@@ -58,6 +58,8 @@
 	file-commits-since = "!f() { git log --pretty=\"%H\" --follow ${2:-master}.. \"$1\"; }; f"
 	m = merge
 	mt = mergetool
+    # https://stackoverflow.com/a/50056710
+	default = "!f() { REMOTE=$(git remote); BRANCH=$(LC_ALL=C git remote show $REMOTE | grep \"HEAD branch\" | sed 's/.*: //'); git checkout $BRANCH; }; f"
 	master = checkout master
 	main = checkout main
 	p = push
