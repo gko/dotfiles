@@ -83,6 +83,7 @@
 	t = tag
 	set-url = remote set-url origin
 	modified = ls-files --modified --others --exclude-standard
+	staged = diff --name-only --cached
 	# custom functions
 	changelog = "!git log --oneline --no-merges $1..HEAD"
 	difference = "!git log --oneline $1..$2"
@@ -100,7 +101,7 @@
 	last-friday="!git log --since='last friday 00:00:00' --before='last friday 23:59:59' --all --decorate --oneline --author=$(git config user.email)"
 	wdiff = diff --word-diff
 	upstream = "!git fetch && git log --oneline --no-merges ..origin/$(git rev-parse --abbrev-ref HEAD)"
-	zip-modified = "!zip modified.zip $(git modified)"
+	zip-modified = "!zip modified.zip $(git modified && git staged)"
 	; open = "!gh repo view --web"
 	o = !git open
 	code = open
