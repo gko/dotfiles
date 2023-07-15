@@ -27,7 +27,7 @@ antigen bundle git-flow
 antigen bundle paulirish/git-open
 
 antigen bundle sbt
-antigen bundle cargo
+antigen bundle rust
 antigen bundle npm
 antigen bundle yarn
 
