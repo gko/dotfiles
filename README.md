@@ -1,7 +1,7 @@
 # Dotfiles
 
 My dotfiles config.
-![screenshot](https://github.com/gko/dotfiles/raw/main/screenshot.png)
+![screenshot](/screenshot.png)
 
 ## Installation
 
