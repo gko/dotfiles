@@ -112,6 +112,11 @@ if [ -s "$WASMER_DIR/wasmer.sh" ]; then
 	source "$WASMER_DIR/wasmer.sh"
 fi
 
+# Coursier (for scala, macOS only)
+if [ -d "${HOME}/Library/Application Support/Coursier/bin" ]; then
+	export PATH="$PATH:${HOME}/Library/Application Support/Coursier/bin"
+fi
+
 # https://github.com/zsh-users/zsh-autosuggestions/issues/422#issuecomment-485890936
 typeset -g ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE='1000'
 
