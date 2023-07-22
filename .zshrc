@@ -1,6 +1,19 @@
 setopt correct
 setopt auto_cd
 
+# rust plugin was trying to access the completions folder
+# https://github.com/ohmyzsh/ohmyzsh/blob/7d5e12500a2ba0b575ffafcbb516568973528730/plugins/rust/rust.plugin.zsh#L22-L23
+#
+# https://github.com/zsh-users/antigen/issues/701#issuecomment-1129781560
+#
+# Since zsh env variables are not available at this point I decided to create a custom cache directory
+# and redefine ZSH_CACHE_DIR variable.
+# In order for this folder to be ignored by git I had to use existing gitignore
+# pattern since the gitignore in this folder is a global one(~/.gitignore).
+# Adding cache folder to it might break some project.
+export ZSH_CACHE_DIR=~/.dotfiles/.metadata/cache
+mkdir -p "${ZSH_CACHE_DIR}/completions"
+
 # Include hidden files in autocomplete:
 _comp_options+=(globdots)
 
