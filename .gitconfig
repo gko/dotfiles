@@ -32,6 +32,8 @@
 	f = fetch
 	graph = log --graph --pretty=oneline --abbrev-commit --decorate --all
 	l = log
+	track = update-index --no-assume-unchanged
+	untrack = update-index --assume-unchanged
 	w = worktree
 	wt = worktree
 	wa = worktree add
