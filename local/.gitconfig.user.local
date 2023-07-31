@@ -1,0 +1,5 @@
+# this file contains only your user email and name
+# redefine it here to avoid modifying other git configs
+[user]
+	email = mail@konstantin.io
+	name = Konstantin Gorodinskii

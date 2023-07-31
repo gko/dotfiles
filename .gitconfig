@@ -125,6 +125,9 @@
 
 # use separate file for username / github token / etc
 [include]
+	# user name and email only
+	path = ~/.gitconfig.user.local
+	# other local configuration
 	path = ~/.gitconfig.local
 
 [color]

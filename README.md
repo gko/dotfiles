@@ -24,24 +24,9 @@ In `iterm` check the « Italic text » checkbox in `Settings` → `Profiles` →
 
 Then in « Report terminal type » (`Settings` → `Profiles` → `Terminal`) set `xterm-256color-italic`.
 
-## User config
+## User configuration
 
-You can specify a persistent config in following files (in `~/` folder):
-- [`.gitconfig.local`](/.gitconfig.local)
-- [`.zshrc.local`](/.zshrc.local)
-- [`.tmux.conf.local`](/.tmux.conf.local)
-
-They won't be rewritten during the installation
-
-If you want to copy all example `.local` config files from `.dotfiles` just run following:
-```shell
-cp ~/.dotfiles/.*.local ~/
-```
-
-or to link them:
-```shell
-ln -sf ~/.dotfiles/.*.local ~/
-```
+Please see [/local/README.md](/local/README.md) for local configuration files.
 
 ## License
 
