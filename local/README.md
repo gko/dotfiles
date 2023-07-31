@@ -26,3 +26,12 @@ it makes sense to ignore the local changes to this file:
 cd ~/.dotfiles
 git update-index --assume-unchanged local/.gitconfig.user.local
 ```
+
+or
+
+```
+cd ~/.dotfiles
+git untrack local/.gitconfig.user.local
+```
+
+if you're using the aliases
