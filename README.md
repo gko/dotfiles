@@ -32,4 +32,4 @@ Please see [/local/README.md](/local/README.md) for local configuration files.
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2012-2020 Konstantin Gorodinskiy
+Copyright (c) 2012-2023 Konstantin Gorodinskiy
