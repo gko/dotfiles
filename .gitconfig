@@ -119,8 +119,10 @@
 	comment = "!f() { gh api --silent \"repos/:owner/:repo/issues/$1/comments\" --raw-field \"body=$2\"; }; f"
 	; alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 
-# push easily. http://stackoverflow.com/a/23918418/89484
 [push]
+	# https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushautoSetupRemote
+	autoSetupRemote = true
+	# push easily. http://stackoverflow.com/a/23918418/89484
 	default = current
 
 # use separate file for username / github token / etc
