@@ -43,6 +43,3 @@
 
 [pull]
 	rebase = true
-
-[commit]
-  verbose = true
