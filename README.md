@@ -28,6 +28,16 @@ Then in « Report terminal type » (`Settings` → `Profiles` → `Terminal`) se
 
 Please see [/local/README.md](/local/README.md) for local configuration files.
 
+## Some issues
+
+### Arrow on the left side of iterm
+
+See fix: https://github.com/romkatv/powerlevel10k/issues/970#issuecomment-678410522
+
+### Option key as meta key
+
+https://github.com/gko/vimio#macos
+
 ## License
 
 [MIT](http://opensource.org/licenses/MIT)
