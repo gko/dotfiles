@@ -139,4 +139,8 @@ fi
 
 export PATH=$PATH:~/bin
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# this comes from here:
+# https://iterm2.com/documentation-shell-integration.html
+if [ -f "${HOME}/.iterm2_shell_integration.zsh" ]; then
+	source "${HOME}/.iterm2_shell_integration.zsh"
+fi
