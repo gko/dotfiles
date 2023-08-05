@@ -17,7 +17,7 @@
 	remove-local = "!git branch | grep -v \"master\" | xargs git branch -D"
 	del = branch -D
 	; either 2 arguments: `from` and `to`, or just `to` if you're on the branch already
-	rename = "!f() { [[ $# = 2 ]] && local from=$1 || local from=`git symbolic-ref -q --short HEAD`; local to=${2:-$1}; git branch -m $from $to; git push --no-verify origin :$from $to; git push --no-verify origin -u $to; }; f"
+	rename = "!f() { if [ $# -eq 2 ]; then local from=$1; else local from=`git symbolic-ref -q --short HEAD`; fi; local to=${2:-$1}; git branch -m $from $to; git push --no-verify origin :$from $to; git push --no-verify origin -u $to; }; f"
 	c = commit
 	amend = commit --amend
 	abort = "!git rebase --abort 2>/dev/null || git merge --abort 2>/dev/null || git cherry-pick --abort 2>/dev/null"
