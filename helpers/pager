@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+# this is a wrapper for git pager
+# it is needed to automatically adjust light / dark mode
+# if user switches the terminal theme
+
+if [ $(~/.dotfiles/helpers/is_dark_terminal_background) -eq 0 ]; then delta --light "$@"; else delta "$@"; fi

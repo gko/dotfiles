@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+
+# https://stackoverflow.com/a/54652367
+import os
+
+def is_dark_terminal_background():
+    """
+    :return: Whether we have a dark Terminal background color, or None if unknown.
+        We currently just check the env var COLORFGBG,
+        which some terminals define like "<foreground-color>:<background-color>",
+        and if <background-color> in {0,1,2,3,4,5,6,8}, then we have some dark background.
+        There are many other complex heuristics we could do here, which work in some cases but not in others.
+        See e.g. `here <https://stackoverflow.com/questions/2507337/terminals-background-color>`__.
+        But instead of adding more heuristics, we think that explicitly setting COLORFGBG would be the best thing,
+        in case it's not like you want it.
+    :rtype: bool|None
+    """
+    if os.environ.get("COLORFGBG", None):
+        parts = os.environ["COLORFGBG"].split(";")
+        try:
+            last_number = int(parts[-1])
+            if 0 <= last_number <= 6 or last_number == 8:
+                return True
+            else:
+                return False
+        except ValueError:  # not an integer?
+            pass
+    return None  # unknown (and bool(None) == False, i.e. expect light by default)
+
+if __name__ == "__main__":
+    print("1" if is_dark_terminal_background() else "0")
