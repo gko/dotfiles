@@ -1,7 +1,8 @@
 [core]
-	pager = delta --light
+	; pager = delta --light
 	; pager = delta
 	; pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = ~/.dotfiles/helpers/pager
 
 [interactive]
 	diffFilter = delta --color-only --light
