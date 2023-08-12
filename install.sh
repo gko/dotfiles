@@ -59,4 +59,5 @@ echo "\nThat's it. To install local config files do following: \n\n\
   cd ~/.dotfiles \n\
   git untrack local/.gitconfig.user.local\n\n\
 or \n\n\
-  cp ~/.dotfiles/local/.*.local ~/"
+  cp ~/.dotfiles/local/.*.local ~/\
+\n\nmore info here: https://github.com/gko/dotfiles/tree/main/local"
