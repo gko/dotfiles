@@ -24,8 +24,8 @@ rm -rf ~/.tmux/plugins
 cd ~
 
 echo "⬇️  downloading latest version"
-# for testing purposes
-# cp -R ~/projects/dotfiles ~/dotfiles
+# git pull --unshallow
+# to get all revisions
 git clone --depth 1 -b main --recursive https://github.com/gko/dotfiles
 
 echo "⬇️  installing tmux plugins"
