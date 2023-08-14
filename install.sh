@@ -54,7 +54,7 @@ ln -s ~/.dotfiles/.gitattributes ~/.gitattributes
 echo "⚙️  installing antigen"
 curl -L git.io/antigen > ~/.dotfiles/antigen.zsh
 
-echo "\nThat's it. To install local config files do following: \n\n\
+echo -e "\nThat's it. To install local config files do following: \n\n\
   ln -sf ~/.dotfiles/local/.*.local ~/\n\
   cd ~/.dotfiles \n\
   git untrack local/.gitconfig.user.local\n\n\
