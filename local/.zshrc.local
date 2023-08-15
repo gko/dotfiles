@@ -13,6 +13,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+# brew --prefix kotlin
 if [ -d "/usr/local/opt/kotlin" ]; then
 	export KOTLIN_HOME="/usr/local/opt/kotlin/libexec"
 fi
