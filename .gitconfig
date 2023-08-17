@@ -85,6 +85,9 @@
 	t = tag
 	set-url = remote set-url origin
 	modified = ls-files --modified --others --exclude-standard
+	; changed files in a commit
+	; https://stackoverflow.com/a/424142
+	changed-files = show --pretty="" --name-only
 	staged = diff --name-only --cached
 	# custom functions
 	changelog = "!git log --oneline --no-merges $1..HEAD"
