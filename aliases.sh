@@ -56,6 +56,8 @@ alias gds='git diff --staged'
 alias gl='git log'
 
 alias d='docker'
+# list all docker ports exposed by containers
+alias docker-ports='docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}" -a'
 alias prj='project'
 alias p='project'
 
