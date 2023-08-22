@@ -41,6 +41,8 @@ alias nv='nvim'
 alias n='nvim'
 alias e="$EDITOR"
 alias x='exit'
+alias :q='exit'
+alias :qa='exit'
 
 alias g='git'
 alias gc='git commit'
