@@ -122,8 +122,9 @@
 	comment = "!f() { gh api --silent \"repos/:owner/:repo/issues/$1/comments\" --raw-field \"body=$2\"; }; f"
 	; Open PR on GitHub
 	; https://stackoverflow.com/a/26759734/676756
-	open-pr = "!if [  -x \"$(command -v gh)\" ]; then gh pr view -w; else echo \"gh is not installed\"; fi"
+	open-pr = "!if [ -x \"$(command -v gh)\" ]; then gh pr view -w; else echo \"gh is not installed\"; fi"
 	pr-view = open-pr
+	pr-open = open-pr
 	; https://elijahmanor.com/blog/gh-pr-fzf-preview
 	pr-list = "!GH_FORCE_TTY=100% gh pr list | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}' --preview-window down --header-lines 3 | awk '{print $1}' | xargs gh pr checkout"
 	; alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
