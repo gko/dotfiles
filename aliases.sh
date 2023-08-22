@@ -43,6 +43,8 @@ alias e="$EDITOR"
 alias x='exit'
 alias :q='exit'
 alias :qa='exit'
+alias :Q='exit'
+alias :QA='exit'
 
 alias g='git'
 alias gc='git commit'
