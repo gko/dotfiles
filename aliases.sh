@@ -58,6 +58,8 @@ alias gs='git status'
 alias gd='git diff'
 alias gds='git diff --staged'
 alias gl='git log'
+alias gsave='git save'
+alias gstash='git stash'
 
 alias d='docker'
 # list all docker ports exposed by containers
