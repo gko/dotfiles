@@ -47,6 +47,7 @@ alias :Q='exit'
 alias :QA='exit'
 
 alias g='git'
+alias gcl='git cl'
 alias gc='git commit'
 alias ga='git add'
 alias gA='git add -A'
