@@ -67,6 +67,10 @@ alias d='docker'
 alias docker-ports='docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}" -a'
 alias prj='project'
 alias p='project'
+alias notes="mkdir -p ~/Documents/Notes/ && $EDITOR ~/Documents/Notes/index.md"
+alias note="notes"
+alias todo="mkdir -p ~/Documents/Notes/ && $EDITOR ~/Documents/Notes/todo.md"
+alias TODO="todo"
 
 # getting around
 alias ..="cd .."
