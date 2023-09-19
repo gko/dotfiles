@@ -19,6 +19,8 @@ case $OSTYPE in
 	darwin*)
 		alias ls="ls -h -G"
 		alias clip="pbcopy"
+		alias hide="chflags hidden"
+		alias unhide="chflags nohidden"
 		;;
 	cygwin|win32|win64|msys)
 		alias open="cmd /c start"
