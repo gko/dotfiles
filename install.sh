@@ -29,6 +29,7 @@ echo "⬇️  downloading latest version"
 git clone --depth 1 -b main --recursive https://github.com/gko/dotfiles
 
 echo "⬇️  installing tmux plugins"
+# https://github.com/tmux-plugins/tpm/issues/193
 mkdir -p ~/.tmux/plugins
 git clone --depth 1 https://github.com/tmux-plugins/tmux-sensible ~/.tmux/plugins/tmux-sensible
 git clone --depth 1 https://github.com/tmux-plugins/tmux-resurrect ~/.tmux/plugins/tmux-resurrect
