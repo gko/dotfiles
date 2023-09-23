@@ -4,4 +4,5 @@
 # it is needed to automatically adjust light / dark mode
 # if user switches the terminal theme
 
-if [ $(~/.dotfiles/helpers/is_dark_terminal_background) -eq 0 ]; then delta --light "$@"; else delta "$@"; fi
+if [ $(~/.dotfiles/helpers/is_dark_terminal_background) -eq 0 ]; then delta --color-only --light "$@"; else delta --color-only "$@"; fi
+# delta --color-only --light "$@"

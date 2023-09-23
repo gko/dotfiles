@@ -5,12 +5,7 @@
 	pager = ~/.dotfiles/helpers/pager
 
 [interactive]
-	; TODO use the pager ~/.dotfiles/helpers/pager
-	; The error that I'm getting:
-	; error: mismatched output from interactive.diffFilter
-	; hint: Your filter must maintain a one-to-one correspondence
-	; hint: between its input and output lines.
-	diffFilter = delta --color-only --light
+	diffFilter = ~/.dotfiles/helpers/pager
 
 [delta]
 	features = unobtrusive-line-numbers decorations
@@ -40,8 +35,8 @@
 	trustExitCode = true
 
 [merge]
-	keepBackup = false
 	tool = webstorm
+	keepBackup = false
 
 [diff]
 	tool = webstorm
