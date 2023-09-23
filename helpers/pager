@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
-# this is a wrapper for git pager
+# this is a wrapper for git pager and diffFilter
 # it is needed to automatically adjust light / dark mode
-# if user switches the terminal theme
+# if user switches the terminal theme(restart is necessary after theme change)
 
 if [ $(~/.dotfiles/helpers/is_dark_terminal_background) -eq 0 ]; then
     delta --color-only --light "$@";
