@@ -2,10 +2,10 @@
 	; pager = delta --light
 	; pager = delta
 	; pager = diff-so-fancy | less --tabs=4 -RFX
-	pager = ~/.dotfiles/helpers/pager
+	pager = ~/.dotfiles/helpers/diff
 
 [interactive]
-	diffFilter = ~/.dotfiles/helpers/pager
+	diffFilter = ~/.dotfiles/helpers/diff
 
 [delta]
 	features = unobtrusive-line-numbers decorations
