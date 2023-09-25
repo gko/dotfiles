@@ -120,7 +120,7 @@
 	rename-repo = "!f() { gh api -XPATCH repos/:owner/:repo -f name=$1 | grep -e \"ssh_url\" | sed -E 's/.*\"ssh_url\":\"?([^,\"]*)\"?.*/\\1/' | xargs git set-url; }; f"
 	# git comment 7 "some comment"
 	comment = "!f() { gh api --silent \"repos/:owner/:repo/issues/$1/comments\" --raw-field \"body=$2\"; }; f"
-	; Open PR on GitHub
+	; Open PR on GitHub if it exists and create it if it doesn't exist
 	; https://stackoverflow.com/a/26759734/676756
 	pr = "!if [ -x \"$(command -v gh)\" ]; then \
 		if ! gh pr view --web &> /dev/null; then \
