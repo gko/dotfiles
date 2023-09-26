@@ -1,0 +1,16 @@
+git_protocol: ssh
+editor:
+prompt: enabled
+pager:
+# https://github.com/vEnhance/dotfiles/blob/main/gh-config.yml
+aliases:
+    co: pr checkout
+    diff: pr diff
+    merge: pr merge
+    close: issue close
+    add: issue create --title
+    todo: issue create -a @me --title
+    mine: issue list -a @me
+    e: issue edit
+    label: issue edit --add-label
+    claim: issue edit --add-assignee @me
