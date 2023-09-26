@@ -52,6 +52,10 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/.gitignore ~/.gitignore
 ln -s ~/.dotfiles/.gitattributes ~/.gitattributes
 
+# install gh config https://cli.github.com/
+mkdir -p ~/.config/gh
+ln -s ~/.dotfiles/gh-config.yml ~/.config/gh/config.yml
+
 echo "⚙️  installing antigen"
 curl -L git.io/antigen > ~/.dotfiles/antigen.zsh
 
