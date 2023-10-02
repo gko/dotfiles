@@ -82,6 +82,11 @@
 	save = stash save
 	pop = stash pop
 	sub = submodule
+	# https://stackoverflow.com/a/36593218/676756
+	submodule-remove = "!f() { \
+		git submodule deinit -f \"$1\"; \
+		git rm -rf \"$1\"; \
+		rm -rf \".git/modules/${1}\"; }; f"
 	t = tag
 	set-url = remote set-url origin
 	modified = ls-files --modified --others --exclude-standard
