@@ -11,14 +11,19 @@ alias ll="ls -lah"
 case $OSTYPE in
 	linux*)
 		alias open="xdgWrap"
+		# TODO wl-clipboard https://superuser.com/a/1377550
 		alias clip="xclip -selection clipboard"
+		alias copy="xclip -selection clipboard"
 		;;
 	bsd*)
 		alias open="xdgWrap"
+		alias clip="xclip -selection clipboard"
+		alias copy="xclip -selection clipboard"
 		;;
 	darwin*)
 		alias ls="ls -h -G"
 		alias clip="pbcopy"
+		alias copy="pbcopy"
 		alias hide="chflags hidden"
 		alias unhide="chflags nohidden"
 		;;
