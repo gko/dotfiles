@@ -87,6 +87,7 @@ alias back="cd -"
 alias -- -="cd -"
 
 alias grep="grep --color=auto"
+alias compare="diff --exclude=.git --color=auto -rq"
 alias diff="diff --color=auto"
 alias ccat="highlight --out-format=ansi"
 alias download_website='wget -H -E -k -p '
