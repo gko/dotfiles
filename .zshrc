@@ -67,6 +67,7 @@ case `uname` in
 	Darwin)
 		bindkey "^[^[[C" forward-word
 		bindkey "^[^[[D" backward-word
+		source ~/.dotfiles/macOS/helpers
 		;;
 	Linux)
 		bindkey "^[[1;5C" forward-word

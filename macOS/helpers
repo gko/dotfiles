@@ -9,6 +9,32 @@ function showDesktopIcons() {
 	killall Finder;
 }
 
+function toggleFocusMode() {
+    # Check if System Events has necessary permissions
+    if ! osascript -e 'tell application "System Events" to get name of first process' &>/dev/null; then
+        osascript -e 'display dialog "Please grant accessibility permissions to Terminal in System Preferences → Security & Privacy → Privacy → Accessibility" buttons {"OK"} default button 1'
+        open "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility"
+        return
+    fi
+
+    local menuIsHidden=$(osascript -e 'tell application "System Events" to tell dock preferences to get autohide menu bar')
+    if [[ "$menuIsHidden" == "true" ]]; then
+        defaults write com.apple.dock autohide -bool false
+        osascript -e 'tell application "System Events" to tell dock preferences to set autohide menu bar to false'
+        defaults write com.apple.finder CreateDesktop -bool true
+        notificationText="Menu Bar, Dock, and Desktop items shown"
+    else
+        defaults write com.apple.dock autohide -bool true
+        osascript -e 'tell application "System Events" to tell dock preferences to set autohide menu bar to true'
+        defaults write com.apple.finder CreateDesktop -bool false
+        notificationText="Menu Bar, Dock, and Desktop items hidden"
+    fi
+    killall Dock
+    killall Finder
+
+    # Display notification
+    osascript -e "display notification \"$notificationText\" with title \"Visibility Toggled\""
+}
 
 # https://stackoverflow.com/a/61121564
 
