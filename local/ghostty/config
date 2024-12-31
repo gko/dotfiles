@@ -5,8 +5,8 @@ font-size = 15.3
 adjust-cell-height = 35%
 background-opacity = 0.96
 # cursor-invert-fg-bg = true
-cursor-style = underline
 # https://github.com/ghostty-org/ghostty/discussions/3194
+cursor-style = underline
 adjust-underline-thickness = 1
 adjust-cursor-thickness = 1
 adjust-underline-position = 3
@@ -18,6 +18,13 @@ window-height = 27
 window-width = 105
 macos-titlebar-style = hidden
 macos-option-as-alt = true
+
+# https://x.com/flarup/status/1873770828271411477
+macos-icon = custom-style
+macos-icon-screen-color = #0D0208
+macos-icon-frame = beige
+macos-icon-ghost-color = #003B00
+
 auto-update-channel = tip
 
 # theme
