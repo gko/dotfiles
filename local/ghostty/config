@@ -4,6 +4,7 @@ font-family = Jetbrains Mono
 font-size = 15.3
 adjust-cell-height = 35%
 background-opacity = 0.96
+background-blur-radius = 10
 # cursor-invert-fg-bg = true
 # https://github.com/ghostty-org/ghostty/discussions/3194
 cursor-style = underline
