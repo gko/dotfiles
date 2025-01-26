@@ -26,7 +26,7 @@ macos-icon-screen-color = #0D0208
 macos-icon-frame = beige
 macos-icon-ghost-color = #003B00
 
-auto-update-channel = tip
+auto-update-channel = stable
 
 # theme
 background = #fafafa
