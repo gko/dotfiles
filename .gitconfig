@@ -1,6 +1,6 @@
 # correct typos
 [help]
-	autocorrect = 1
+	autocorrect = 50
 
 [core]
 	excludesfile = ~/.gitignore
