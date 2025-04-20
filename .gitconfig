@@ -97,6 +97,8 @@
 	# custom functions
 	changelog = "!git log --oneline --no-merges $1..HEAD"
 	difference = "!git log --oneline $1..$2"
+	commits-with-env-files = !git log --all --oneline --name-status -- ".env" "**/*.env"
+
 	# refresh the date of commits (https://dev.to/konstantin/refresh-commit-date-2cnh)
 	refresh-date = "!f() { git rebase HEAD~$1 --ignore-date; }; f"
 	local = "!git log --oneline --no-merges origin/$(git rev-parse --abbrev-ref HEAD).."
