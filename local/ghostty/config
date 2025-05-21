@@ -28,25 +28,26 @@ macos-icon-ghost-color = #003B00
 
 auto-update-channel = stable
 
-# theme
-background = #fafafa
-foreground = #54433a
-selection-background = #e4effb
-selection-foreground = #54433a
-cursor-color = #777777
-palette = 0=#e9e1db
-palette = 1=#c77b8b
-palette = 2=#6e9b72
-palette = 3=#bc5c00
-palette = 4=#7892bd
-palette = 5=#be79bb
+# theme (Melange light)
+# https://github.com/savq/melange-nvim/blob/master/term/ghostty/melange_light
+background = #F1F1F1
+foreground = #54433A
+cursor-color = #54433A
+selection-background = #D9D3CE
+selection-foreground = #54433A
+palette = 0=#E9E1DB
+palette = 1=#C77B8B
+palette = 2=#6E9B72
+palette = 3=#BC5C00
+palette = 4=#7892BD
+palette = 5=#BE79BB
 palette = 6=#739797
-palette = 7=#7d6658
-palette = 8=#a98a78
-palette = 9=#bf0021
-palette = 10=#3a684a
-palette = 11=#a06d00
-palette = 12=#465aa4
+palette = 7=#7D6658
+palette = 8=#A98A78
+palette = 9=#BF0021
+palette = 10=#3A684A
+palette = 11=#A06D00
+palette = 12=#465AA4
 palette = 13=#904180
-palette = 14=#3d6568
-palette = 15=#54433a
+palette = 14=#3D6568
+palette = 15=#54433A
