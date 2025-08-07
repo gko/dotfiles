@@ -1,0 +1,30 @@
+// https://zed.dev/docs/configuring-zed
+{
+	"agent": {
+		"default_model": {
+			"provider": "google",
+			"model": "gemini-2.5-pro"
+		}
+	},
+	"toolbar": {
+		"breadcrumbs": false,
+		"quick_actions": false
+	},
+	"terminal": {
+		"toolbar": {
+			"breadcrumbs": false
+		}
+	},
+	"vim_mode": true,
+	"ui_font_size": 15,
+	"buffer_font_size": 14.5,
+	"buffer_line_height": {
+		"custom": 1.7
+	},
+	"theme": "Old Book",
+	"buffer_font_family": "JetBrains Mono",
+	"title_bar": {
+		"show_sign_in": false,
+		"show_user_picture": false
+	}
+}
