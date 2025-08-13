@@ -21,41 +21,47 @@ source ~/.dotfiles/_functions.sh
 source ~/.dotfiles/aliases.sh
 source ~/.dotfiles/settings.sh
 
-source ~/.dotfiles/antigen.zsh
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
 
-antigen use oh-my-zsh
+zinit light gko/project
+zinit light gko/gwt
+zinit light gko/ssh-connect
+zinit light gko/docker-alias
 
-antigen bundle gko/project
-antigen bundle gko/ssh-connect
-antigen bundle gko/docker-alias
+zinit light zsh-users/zsh-history-substring-search
+# zinit light zsh-users/zsh-autosuggestions
+zinit snippet OMZP::web-search
+zinit snippet OMZP::z
+zinit light ytdl-org/youtube-dl
 
-antigen bundle zsh-users/zsh-history-substring-search
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle web-search
-antigen bundle z
-antigen bundle ytdl-org/youtube-dl
+zinit snippet OMZP::git-extras
+zinit snippet OMZP::git-flow
+zinit light paulirish/git-open
 
-antigen bundle git-extras
-antigen bundle git-flow
-antigen bundle paulirish/git-open
+zinit snippet OMZP::sbt
+zinit snippet OMZP::rust
+zinit snippet OMZP::npm
+zinit snippet OMZP::yarn
 
-antigen bundle sbt
-antigen bundle rust
-antigen bundle npm
-antigen bundle yarn
-
-# antigen bundle nightsense/cosmic_latte shell/cosmic_latte_light.sh
-# antigen bundle nightsense/snow shell/snow_light.sh
-# antigen theme denysdovhan/spaceship-prompt
-antigen bundle chriskempson/base16-shell
-antigen theme gko/heart
-antigen bundle zsh-users/zsh-syntax-highlighting
+# nightsense/cosmic_latte shell/cosmic_latte_light.sh
+# nightsense/snow shell/snow_light.sh
+# denysdovhan/spaceship-prompt
+zinit light chriskempson/base16-shell
+zinit light gko/heart
+zinit light zsh-users/zsh-syntax-highlighting
 
 # NVM bundle
 export NVM_LAZY_LOAD=false
-antigen bundle lukechilds/zsh-nvm
+zinit light lukechilds/zsh-nvm
 
-antigen apply
+# https://github.com/zdharma-continuum/zinit?tab=readme-ov-file#calling-compinit-without-turbo-mode
+autoload -Uz compinit
+compinit
+
+zinit cdreplay -q
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"

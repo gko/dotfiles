@@ -17,7 +17,6 @@ rm -f ~/.gitignore
 rm -f ~/.bash_profile
 rm -rf ~/dotfiles
 rm -rf ~/.dotfiles
-rm -rf ~/.antigen
 rm -rf ~/.tmux.conf
 rm -rf ~/.tmux/plugins
 
@@ -55,9 +54,6 @@ ln -s ~/.dotfiles/.gitattributes ~/.gitattributes
 # install gh config https://cli.github.com/
 mkdir -p ~/.config/gh
 ln -s ~/.dotfiles/gh-config.yml ~/.config/gh/config.yml
-
-echo "⚙️  installing antigen"
-curl -L git.io/antigen > ~/.dotfiles/antigen.zsh
 
 echo -e "\nDone!\n\nTo install local config files do following: \n\n\
   ln -sf ~/.dotfiles/local/.*.local ~/\n\
