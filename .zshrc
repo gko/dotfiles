@@ -47,7 +47,7 @@ zinit snippet OMZP::z
 zinit light ytdl-org/youtube-dl
 
 zinit snippet OMZP::git-extras
-zinit snippet OMZP::git-flow
+# zinit snippet OMZP::git-flow
 zinit light paulirish/git-open
 
 zinit snippet OMZP::sbt
