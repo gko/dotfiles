@@ -31,8 +31,17 @@ zinit light gko/gwt
 zinit light gko/ssh-connect
 zinit light gko/docker-alias
 
+zinit light zsh-users/zsh-autosuggestions
+
+# https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/history-substring-search/README.md
+export HISTORY_SUBSTRING_SEARCH_PREFIXED=1
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=''
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
+export HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 zinit light zsh-users/zsh-history-substring-search
-# zinit light zsh-users/zsh-autosuggestions
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 zinit snippet OMZP::web-search
 zinit snippet OMZP::z
 zinit light ytdl-org/youtube-dl
