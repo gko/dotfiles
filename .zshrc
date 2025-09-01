@@ -42,6 +42,7 @@ zinit light zsh-users/zsh-history-substring-search
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+zinit snippet OMZL::functions.zsh
 zinit snippet OMZP::web-search
 zinit snippet OMZP::z
 zinit light ytdl-org/youtube-dl
