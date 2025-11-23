@@ -161,3 +161,7 @@ export PATH=$PATH:~/bin
 if [ -f "${HOME}/.iterm2_shell_integration.zsh" ]; then
 	source "${HOME}/.iterm2_shell_integration.zsh"
 fi
+
+if [ -d "${HOME}/.local/bin" ]; then
+	export PATH="${HOME}/.local/bin:$PATH"
+fi
