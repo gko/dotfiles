@@ -56,5 +56,7 @@ FZF-EOF"
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-# https://github.com/mozilla/sccache?tab=readme-ov-file#installation
-export RUSTC_WRAPPER=sccache
+if (( $+commands[sccache] )); then
+  # https://github.com/mozilla/sccache?tab=readme-ov-file#installation
+  export RUSTC_WRAPPER=sccache
+fi
