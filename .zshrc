@@ -29,6 +29,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 zinit light gko/project
 zinit light gko/gwt
 zinit light gko/brick
+zinit as"program" mv"sandboxed.sh -> sandboxed" pick"sandboxed" for gko/sandboxed
 zinit light gko/ssh-connect
 zinit light gko/docker-alias
 
