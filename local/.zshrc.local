@@ -57,9 +57,9 @@ FZF-EOF"
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 if (( $+commands[sccache] )); then
-  # https://github.com/mozilla/sccache?tab=readme-ov-file#installation
-  export RUSTC_WRAPPER=sccache
+	# https://github.com/mozilla/sccache?tab=readme-ov-file#installation
+	export RUSTC_WRAPPER=sccache
 fi
 
 alias oc="opencode"
-alias opencode="bash ~/.config/opencode/macos-sandbox/macos_sandbox.sh"
+alias opencode="sandboxed opencode"
